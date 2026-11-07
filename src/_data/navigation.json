@@ -1,0 +1,23 @@
+{
+  "main": [
+    { "title": "Home", "url": "/" },
+    { "title": "Training", "url": "/training/" },
+    { "title": "Calendar", "url": "/calendar/" },
+    { "title": "Announcements", "url": "/announcements/" },
+    { "title": "Supply", "url": "/supply/" },
+    { "title": "Parents & Cadets", "url": "/parents/" },
+    {
+      "title": "Alumni",
+      "url": "/80th-anniversary/",
+      "children": [
+        { "title": "80th Anniversary", "url": "/80th-anniversary/" },
+        { "title": "History", "url": "/squadron-history/" },
+        { "title": "Newsletters", "url": "/newsletters/" },
+        { "title": "Alumni Gallery", "url": "/gallery/" },
+        { "title": "Join Alumni", "url": "/join-alumni/" }
+      ]
+    },
+    { "title": "Contact", "url": "/contact/" }
+  ],
+  "cta": { "title": "Join Now", "url": "/join/" }
+}

@@ -1,0 +1,299 @@
+# =====================================================================
+#  395 SQUADRON CALENDAR
+#  Every event here appears on the Calendar page, the "Coming up" list on
+#  the home page, the calendar subscription feed (/calendar.ics) and in any
+#  announcement that uses {% monthSchedule "YYYY-MM" %}.
+#
+#  HOW TO ADD AN EVENT – copy a block below and change it:
+#
+#  - title: Regular Training Night – All Cadets
+#    date: 2026-12-01          # YYYY-MM-DD
+#    start: "18:15"            # 24-hour time in quotes. Leave out start/end for an all-day item.
+#    end: "21:15"
+#    endDate: 2026-12-03       # optional – only for events that span several days
+#    location: nonsuch         # a key from locations.yaml, or any text, e.g. "Kinsmen Sports Centre"
+#    category: training        # a key from categories.yaml
+#    who: All cadets to attend
+#    dress: FTU
+#    bring: Water bottle
+#    notes:                    # optional extra bullet points
+#      - Anything else people need to know.
+#    link: { text: More information, url: "https://example.com" }   # optional
+#    cancelled: true           # optional – shows the event struck through as CANCELLED
+#
+#  Keep events in date order to make the file easy to read (the site sorts them anyway).
+# =====================================================================
+
+# ---------------------------- September 2026 ----------------------------
+- title: Band Training Night
+  date: 2026-09-28
+  start: "18:30"
+  end: "21:00"
+  location: aam
+  category: band
+  who: Open to all cadets.
+  notes:
+    - Instruments are provided.
+
+- title: Regular Training Night – All Cadets
+  date: 2026-09-29
+  start: "18:15"
+  end: "21:15"
+  location: nonsuch
+  category: training
+  who: All cadets to attend – new and returning.
+  dress: FTU for cadets who have uniforms. In support of Truth and Reconciliation Day cadets can wear an orange t-shirt with their FTUs.
+  notes:
+    - Uniform exchanges for returning cadets to be completed tonight if needed. Wash the uniform parts before exchanging them.
+
+- title: "Deadline: Squadron T-Shirt Order"
+  date: 2026-09-29
+  category: deadline
+  notes:
+    - Navy blue t-shirt ($30) with last name on the back and the Squadron Crest on the front. Can be worn with the FTU uniform.
+  link: { text: "FTU shirt order form", url: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-2oSqwzmL062z8c1DHbchG2AykP3p9ZCqD5Idq6TSSRURUNQMlFVMTVNRjhYTUlXMDJTVzhEUDRPNy4u" }
+
+# ----------------------------- October 2026 -----------------------------
+- title: "Deadline: Ground School Applications"
+  date: 2026-10-13
+  category: deadline
+  who: Eligible cadets applying for Glider or Power Pilot Training.
+  notes:
+    - The sign-up is posted on TEAMS along with the eligibility requirements. To apply for Glider or Power Training you must take ground school.
+
+- title: Karate Training
+  date: 2026-10-24
+  start: "13:00"
+  end: "16:00"
+  location: central-lions
+  category: karate
+  who: Open to all cadets.
+  dress: Sports clothing
+  bring: Clean indoor shoes and a water bottle.
+
+- title: Band Training Night
+  date: 2026-10-26
+  start: "18:30"
+  end: "21:00"
+  location: aam
+  category: band
+  who: Open to all cadets.
+  notes:
+    - Instruments are provided.
+
+- title: Regular Training Night – All Cadets
+  date: 2026-10-27
+  start: "18:15"
+  end: "21:15"
+  location: nonsuch
+  category: training
+  who: All cadets to attend.
+  dress: Civilian attire. Halloween costumes are encouraged.
+
+- title: Karate Training
+  date: 2026-10-31
+  start: "13:00"
+  end: "16:00"
+  location: central-lions
+  category: karate
+  who: Open to all cadets.
+  dress: Sports clothing
+  bring: Clean indoor shoes and a water bottle.
+
+# ----------------------------- November 2026 ----------------------------
+- title: Ground School
+  date: 2026-11-01
+  start: "17:00"
+  end: "20:00"
+  location: nonsuch
+  category: ground-school
+  who: Open to all cadets interested in the Glider and Power Pilot Course.
+  dress: Civilian clothing
+  bring: A water bottle, paper and pen.
+
+- title: Band Training Night
+  date: 2026-11-02
+  start: "18:30"
+  end: "21:00"
+  location: aam
+  category: band
+  who: Open to all cadets.
+  notes:
+    - Instruments are provided.
+
+- title: CO’s Parade and Regular Training Night – All Cadets
+  date: 2026-11-03
+  start: "18:15"
+  end: "21:15"
+  location: nonsuch
+  category: training
+  who: All cadets to attend.
+  dress: C1 Blue Dress Uniform. For those who only have FTU – please wear them.
+
+- title: Fall Field Training Exercise (FTX)
+  date: 2026-11-06
+  start: "17:00"
+  endDate: 2026-11-08
+  end: "15:30"
+  location: jefferson
+  category: ftx
+  who: Cadets attend as per the sign-up sheet.
+  dress: FTUs to be worn.
+  bring: Items as per the Kit List posted on Squadron Teams.
+  notes:
+    - "Drop off Fri Nov 6: 5 pm at Jefferson Armouries (11630 109 St NW, Edmonton)."
+    - "Pick up Sun Nov 8: approx. 3:30 pm at Jefferson Armouries. Social media will be updated with more accurate timing of return."
+  link: { text: "FTX information (Sway)", url: "https://sway.cloud.microsoft/JNyvPj5ZEcOtRz8p?ref=Link" }
+
+- title: Band Training Night
+  date: 2026-11-09
+  start: "18:30"
+  end: "21:00"
+  location: aam
+  category: band
+  who: Open to all cadets.
+  notes:
+    - Instruments are provided.
+
+- title: Regular Training Night – All Cadets (Early Dismissal 20:30)
+  date: 2026-11-10
+  start: "18:15"
+  end: "20:30"
+  location: nonsuch
+  category: training
+  who: All cadets to attend.
+  dress: FTU
+  notes:
+    - Early dismissal at 2030 hrs (8:30 pm).
+
+- title: Remembrance Day Parade – All Cadets (Mandatory)
+  date: 2026-11-11
+  start: "09:00"
+  end: "11:45"
+  location: maranatha
+  category: ceremonial
+  who: All cadets to attend.
+  dress: C1 Blue Dress Uniform. For those who only have FTU – please wear them. Cadets are encouraged to wear a jacket and black gloves with their uniform. If you have the cadet parka please wear it.
+  notes:
+    - Arrive at 9:00 am at Maranatha Christian Reformed Church (11905 47 St NW).
+    - The non-denominational service begins at 9:30 am.
+    - 10:00–10:15 am – form up on the road outside the church.
+    - Cadets will march from the church to the Beverly Cenotaph.
+    - Pick up from the Beverly Cenotaph (4001 118 Ave NW) at approx. 11:45 am.
+
+- title: Karate Training
+  date: 2026-11-14
+  start: "13:00"
+  end: "16:00"
+  location: central-lions
+  category: karate
+  who: Open to all cadets.
+  dress: Sports clothing
+  bring: Clean indoor shoes and a water bottle.
+
+- title: Tri-Service Band Practice
+  date: 2026-11-14
+  start: "13:00"
+  end: "16:00"
+  location: nonsuch
+  category: band
+  who: Open to all band cadets.
+  bring: Your instrument and music.
+
+- title: Ground School
+  date: 2026-11-15
+  start: "17:00"
+  end: "20:00"
+  location: nonsuch
+  category: ground-school
+  who: Open to all cadets interested in the Glider and Power Pilot Course.
+  dress: Civilian clothing
+  bring: A water bottle, paper and pen.
+
+- title: Band Training Night
+  date: 2026-11-16
+  start: "18:30"
+  end: "21:00"
+  location: aam
+  category: band
+  who: Open to all cadets.
+  notes:
+    - Instruments are provided.
+
+- title: Regular Training Night – All Cadets
+  date: 2026-11-17
+  start: "18:15"
+  end: "21:15"
+  location: nonsuch
+  category: training
+  who: All cadets to attend.
+  dress: FTU
+
+- title: Tri-Service Band – Santa Claus Parade
+  date: 2026-11-21
+  start: "10:30"
+  end: "12:00"
+  location: millwoods-tc
+  category: band
+  who: Band cadets as indicated.
+  dress: C1
+  bring: Your instrument and music.
+
+- title: Ground School
+  date: 2026-11-22
+  start: "17:00"
+  end: "20:00"
+  location: nonsuch
+  category: ground-school
+  who: Open to all cadets interested in the Glider and Power Pilot Course.
+  dress: Civilian clothing
+  bring: A water bottle, paper and pen.
+
+- title: Band Training Night
+  date: 2026-11-23
+  start: "18:30"
+  end: "21:00"
+  location: aam
+  category: band
+  who: Open to all cadets.
+  notes:
+    - Instruments are provided.
+
+- title: Regular Training Night – All Cadets
+  date: 2026-11-24
+  start: "18:15"
+  end: "21:15"
+  location: nonsuch
+  category: training
+  who: All cadets to attend.
+  dress: FTU
+
+- title: Karate Training
+  date: 2026-11-28
+  start: "13:00"
+  end: "16:00"
+  location: central-lions
+  category: karate
+  who: Open to all cadets.
+  dress: Sports clothing
+  bring: Clean indoor shoes and a water bottle.
+
+- title: Ground School
+  date: 2026-11-29
+  start: "17:00"
+  end: "20:00"
+  location: nonsuch
+  category: ground-school
+  who: Open to all cadets interested in the Glider and Power Pilot Course.
+  dress: Civilian clothing
+  bring: A water bottle, paper and pen.
+
+- title: Band Training Night
+  date: 2026-11-30
+  start: "18:30"
+  end: "21:00"
+  location: aam
+  category: band
+  who: Open to all cadets.
+  notes:
+    - Instruments are provided.

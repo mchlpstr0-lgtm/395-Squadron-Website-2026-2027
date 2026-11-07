@@ -1,0 +1,16 @@
+{#- Expects `list` (events). Server renders upcoming events as of build time;
+    main.js hides any that have already finished and keeps the first `data-max`. -#}
+<ol class="upcoming" role="list" data-upcoming data-max="{{ upcomingMax or 4 }}">
+  {%- for e in list | limit(12) %}
+  <li class="upcoming-item{% if e.cancelled %} is-cancelled{% endif %}" data-end="{{ e.endUtc }}" style="--cat: {{ e.categoryColor }}"{% if loop.index > (upcomingMax or 4) %} hidden{% endif %}>
+    <a href="/calendar/#{{ e.id }}" class="upcoming-link">
+      <span class="upcoming-date" aria-hidden="true"><span class="ud-mon">{{ e.date | date("mon") }}</span><span class="ud-day">{{ e.date | date("day") }}</span></span>
+      <span class="upcoming-body">
+        <span class="upcoming-title">{{ e.title }}{% if e.cancelled %} <em>(Cancelled)</em>{% endif %}</span>
+        <span class="upcoming-meta"><span class="visually-hidden">{{ e.dateLabel }}, </span>{% if not e.endDate %}{{ e.date | date("dow") }} · {% endif %}{{ e.whenLabel }}{% if e.location %} · {{ e.location.name }}{% endif %}</span>
+      </span>
+    </a>
+  </li>
+  {%- endfor %}
+</ol>
+<p class="upcoming-empty"{% if list.length %} hidden{% endif %} data-upcoming-empty>Nothing posted yet – check back soon or watch the <a href="/announcements/">announcements</a>.</p>

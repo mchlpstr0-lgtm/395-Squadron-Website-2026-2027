@@ -1,0 +1,130 @@
+---
+layout: layouts/page.njk
+title: Contact
+heading: Contact the Squadron
+eyebrow: Get in touch
+intro: Questions about cadets, registration, uniforms or an upcoming activity? Email, call or text the squadron – or drop by the office on a Tuesday night.
+description: Contact 395 Edmonton Royal Canadian Air Cadet Squadron, report a cadet absence, or find our location at HMCS Nonsuch.
+permalink: /contact/
+scripts: ["/assets/js/absence.js"]
+---
+<div class="grid grid-3">
+  <a class="card link-tile" href="mailto:{{ site.email }}"><span class="link-tile-icon">{% icon "mail" %}</span><span><strong>Email</strong><span>{{ site.email }}</span></span></a>
+  <a class="card link-tile" href="tel:{{ site.phoneHref }}"><span class="link-tile-icon">{% icon "phone" %}</span><span><strong>Call or text</strong><span>{{ site.phone }}</span></span></a>
+  <a class="card link-tile" href="{{ site.address.mapQuery | mapsUrl }}" rel="noopener"><span class="link-tile-icon">{% icon "pin" %}</span><span><strong>{{ site.address.building }}</strong><span>{{ site.address.street }}, {{ site.address.city }} {{ site.address.province }} {{ site.address.postal }}</span></span></a>
+</div>
+
+<section id="absence" class="section-title" aria-labelledby="absence-h" style="scroll-margin-top:100px">
+  <div class="split">
+    <div>
+      <p class="eyebrow eyebrow--gold">Can’t make it?</p>
+      <h2 id="absence-h">Report an absence</h2>
+      <p>If you are absent, email (<a href="mailto:{{ site.email }}">{{ site.email }}</a>) or text ({{ site.phone }}) the squadron to let us know. You need to include <strong>Rank, First and Last Name</strong> and the <strong>Date you are absent for</strong>.</p>
+      <p>Fill in the form below and we’ll write the message for you – then send it from your own email or phone.</p>
+
+      <form class="form card card-pad" data-absence-form novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="ab-rank">Rank <span class="req" aria-hidden="true">*</span></label>
+            <select id="ab-rank" name="rank" required>
+              <option value="">Choose rank…</option>
+              <option>AC</option><option>LAC</option><option>Cpl</option><option>FCpl</option>
+              <option>Sgt</option><option>FSgt</option><option>WO2</option><option>WO1</option>
+              <option value="New cadet">New cadet / not sure</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="ab-date">Date absent <span class="req" aria-hidden="true">*</span></label>
+            <input type="date" id="ab-date" name="date" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="ab-first">First name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="ab-first" name="first" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="ab-last">Last name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="ab-last" name="last" autocomplete="family-name" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="ab-until">Absent until <span class="hint">(optional, for more than one day)</span></label>
+            <input type="date" id="ab-until" name="until">
+          </div>
+          <div class="field">
+            <label for="ab-activity">Activity <span class="hint">(optional)</span></label>
+            <select id="ab-activity" name="activity">
+              <option value="">Regular training night</option>
+              <option>Band</option><option>Ground school</option><option>Karate</option><option>Drill</option>
+              <option>Field training exercise (FTX)</option><option>Parade / ceremony</option><option>Other activity</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="ab-note">Note <span class="hint">(optional – e.g. illness, school, family)</span></label>
+          <textarea id="ab-note" name="note" rows="2"></textarea>
+        </div>
+        <div class="field">
+          <label for="ab-from">Your name <span class="hint">(optional – if you’re a parent or guardian)</span></label>
+          <input type="text" id="ab-from" name="from" autocomplete="name">
+        </div>
+        <label class="checkbox"><input type="checkbox" name="remember" id="ab-remember"> Remember the cadet’s rank and name on this device</label>
+        <p class="field-error" data-absence-error hidden></p>
+
+        <div class="field">
+          <span class="field-label" id="ab-preview-label"><strong>Your message</strong></span>
+          <pre class="message-preview" data-absence-preview aria-labelledby="ab-preview-label" aria-live="polite">Fill in the form to build your message.</pre>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="mailto:{{ site.email }}" data-absence-email>{% icon "mail" %} Send by email</a>
+          <a class="btn btn-gold" href="sms:{{ site.phoneHref }}" data-absence-sms>{% icon "message" %} Send by text</a>
+          <button type="button" class="btn btn-ghost" data-absence-copy>{% icon "copy" %} Copy message</button>
+        </div>
+        <p class="hint">Nothing is sent from this website – the buttons open your own email or messaging app with the message ready to go.</p>
+      </form>
+    </div>
+
+    <aside>
+      <div class="card card-pad" id="leaving" style="scroll-margin-top:100px">
+        <h2 class="aside-heading">{% icon "user-x" %} Leaving the program</h2>
+        <p>If you are no longer attending cadets, email <a href="mailto:{{ site.email }}?subject=Leaving%20395%20Squadron">{{ site.email }}</a> to let us know. This will start the process of removing you from our database.</p>
+        <p>Uniforms can be returned on a Tuesday evening during regular training hours.</p>
+      </div>
+      <div class="card card-pad" style="margin-top:1.25rem">
+        <h2 class="aside-heading">{% icon "clock" %} When we meet</h2>
+        <ul class="icon-list" role="list">
+          <li>{% icon "calendar" %}<span><strong>Regular training:</strong> {{ site.paradeNight.label }}<br><small>{{ site.address.building }}</small></span></li>
+          <li>{% icon "music" %}<span><strong>Band:</strong> {{ site.band.label }}<br><small>{{ site.band.location }}</small></span></li>
+          <li>{% icon "info" %}<span><strong>Office:</strong> {{ site.office.paradeNight }}, {{ site.office.hours }}</span></li>
+        </ul>
+        <a class="text-link" href="/calendar/">See the full calendar {% icon "arrow-right", "icon-sm" %}</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section-title" aria-labelledby="find-h">
+  <h2 id="find-h">Find us</h2>
+  <div class="split">
+    <div class="map-embed">
+      <iframe title="Map showing HMCS Nonsuch, 11807 Kingsway NW, Edmonton" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q={{ site.address.mapQuery | urlencode }}&z=15&output=embed"></iframe>
+    </div>
+    <div>
+      <h3>Places we train</h3>
+      <ul class="icon-list" role="list">
+        {%- for key, loc in calendar.locations %}
+        <li>{% icon "pin" %}<span><a href="{{ ((loc.name + ', ' + loc.address) if loc.address else (loc.name + ', Edmonton, AB')) | mapsUrl }}" rel="noopener"><strong>{{ loc.name }}</strong></a>{% if loc.address %}<br><small>{{ loc.address }}</small>{% endif %}</span></li>
+        {%- endfor %}
+      </ul>
+      <h3>Other contacts</h3>
+      <ul class="icon-list" role="list">
+        <li>{% icon "users" %}<span><strong>{{ site.alumni.name }}</strong><br><a href="mailto:{{ site.alumni.email }}">{{ site.alumni.email }}</a></span></li>
+        <li>{% icon "facebook" %}<a href="{{ site.social.facebook }}" rel="noopener">facebook.com/395Squadron</a></li>
+        <li>{% icon "instagram" %}<a href="{{ site.social.instagram }}" rel="noopener">@{{ site.social.instagramHandle }}</a></li>
+      </ul>
+    </div>
+  </div>
+</section>

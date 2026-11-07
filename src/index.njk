@@ -1,0 +1,152 @@
+---
+layout: layouts/base.njk
+title: Air Cadets in Edmonton, Alberta
+bodyClass: is-home
+permalink: /
+---
+{%- set latest = collections.posts[0] %}
+<section class="hero" data-carousel aria-roledescription="carousel" aria-label="Squadron photos">
+  <ul class="hero-slides" role="list">
+    <li class="hero-slide is-active" aria-roledescription="slide" aria-label="1 of 3"><img src="/assets/img/home/squadron-photo-2025.jpg" alt="395 Squadron cadets and staff, 2025 squadron photo" fetchpriority="high"></li>
+    <li class="hero-slide" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true"><img src="/assets/img/home/hero-cadets.jpg" alt="395 Squadron cadets on parade" loading="lazy"></li>
+    <li class="hero-slide" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true"><img src="/assets/img/home/hero-flight-line.jpg" alt="Air cadets on the flight line beside a glider" loading="lazy"></li>
+  </ul>
+  <div class="container hero-inner">
+    <p class="hero-badge"><span>Est. {{ site.founded }}</span> 80 years of Air Cadets in Edmonton</p>
+    <h1>Air Cadets in <em>Edmonton, Alberta</em></h1>
+    <p class="hero-lead">Free aviation, leadership, citizenship and fitness training for youth aged 12 to 19 – every Tuesday night at {{ site.address.building }}.</p>
+    <div class="btn-row">
+      <a class="btn btn-gold btn-lg" href="/join/">Join Now {% icon "arrow-right", "icon-sm" %}</a>
+      <a class="btn btn-light btn-lg" href="/calendar/">{% icon "calendar" %} Squadron calendar</a>
+    </div>
+  </div>
+  <div class="hero-controls">
+    <button type="button" class="hero-dot" data-slide-to="0" aria-current="true" aria-label="Show photo 1"></button>
+    <button type="button" class="hero-dot" data-slide-to="1" aria-label="Show photo 2"></button>
+    <button type="button" class="hero-dot" data-slide-to="2" aria-label="Show photo 3"></button>
+    <button type="button" class="hero-btn" data-carousel-pause aria-label="Pause slideshow">{% icon "pause", "icon-pause" %}{% icon "play", "icon-play" %}</button>
+  </div>
+</section>
+
+<div class="container info-strip">
+  <div class="info-strip-grid">
+    <a class="info-tile" href="/contact/">{% icon "clock" %}<div><strong>Parade night</strong><span>{{ site.paradeNight.label }}<br>{{ site.address.building }}, {{ site.address.street }}</span></div></a>
+    <a class="info-tile" href="/join/">{% icon "users" %}<div><strong>Ages 12 to 19</strong><span>No registration fee.<br>Uniforms are provided free.</span></div></a>
+    <a class="info-tile" href="/contact/#absence">{% icon "user-x" %}<div><strong>Away this week?</strong><span>Report an absence by email or text in under a minute.</span></div></a>
+    {%- if latest %}
+    <a class="info-tile" href="{{ latest.url }}">{% icon "message" %}<div><strong>{{ latest.data.title }}</strong><span>Read this month’s announcement and schedule.</span></div></a>
+    {%- endif %}
+  </div>
+</div>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <p class="eyebrow eyebrow--gold">What cadets do</p>
+      <h2>Training We Offer</h2>
+      <p class="lead">Air Cadets receive training in flying and gliding, survival skills, physical fitness, public speaking, citizenship, and precision drill.</p>
+      <p>The majority of cadet training takes place at the local squadron during the regular school year, with a percentage of cadets selected for summer training courses at various cadet summer training centres located across Canada.</p>
+      <p>395 Squadron has a long and proud history since formation in 1946 of developing in youth the attributes of good citizenship and leadership; promoting physical fitness; and stimulating the interest of youth in the sea, land, and air activities of the Canadian Forces.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="/training/">Explore training</a><a class="btn btn-ghost" href="/parents/">Parents &amp; new cadets guide</a></div>
+    </div>
+    <div class="card card-pad">
+      <h3 class="aside-heading">{% icon "calendar" %} Coming up</h3>
+      {% set list = calendar.events | upcoming %}{% set upcomingMax = 5 %}
+      {% include "partials/upcoming-list.njk" %}
+      <div class="btn-row"><a class="text-link" href="/calendar/">Full calendar {% icon "arrow-right", "icon-sm" %}</a><a class="text-link" href="/calendar/#subscribe">Add to my calendar {% icon "plus", "icon-sm" %}</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="grid grid-3">
+      <article class="card feature-card">
+        <div class="feature-card-img"><img src="/assets/img/home/summer-training.jpg" alt="Air cadets lined up beside aircraft at summer training" loading="lazy"></div>
+        <div class="feature-card-body">
+          <h3>Attend Summer Training For Free</h3>
+          <p>Courses offered at Air Cadet summer training include leadership, flying, fitness and sports, survival, military band, pipe band, aerospace, aviation technology, and marksmanship. The courses offered include familiarization, basic, advanced, and national summer training courses.</p>
+          <a class="text-link" href="/training/#summer-training">Learn more {% icon "arrow-right", "icon-sm" %}</a>
+        </div>
+      </article>
+      <article class="card feature-card">
+        <div class="feature-card-img"><img src="/assets/img/home/soar.jpg" alt="395 Squadron cadets in uniform" loading="lazy"></div>
+        <div class="feature-card-body">
+          <h3>Soar To New Heights</h3>
+          <p>The Royal Canadian Air Cadets is a Canadian national youth program for young individuals aged 12 to 19 whose purpose is to focus on citizenship, leadership, physical fitness, general aviation and stimulating an interest in the activities of the Canadian Forces.</p>
+          <a class="text-link" href="/training/">Learn more {% icon "arrow-right", "icon-sm" %}</a>
+        </div>
+      </article>
+      <article class="card feature-card">
+        <div class="feature-card-img"><img src="/assets/img/home/make-friends.jpg" alt="Cadets together at a squadron event" loading="lazy"></div>
+        <div class="feature-card-body">
+          <h3>Make Friends</h3>
+          <p>Uniforms are provided at no charge. Cadets are responsible for care, cleaning and custody of the issued kit and also to return it when ceasing to be a cadet.</p>
+          <p>The majority of cadet training takes place at the local squadron during the regular school year, with a percentage of cadets selected for summer training courses at various cadet summer training centres located across Canada.</p>
+          <a class="text-link" href="/training/">Learn more {% icon "arrow-right", "icon-sm" %}</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+{%- if latest %}
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <p class="eyebrow">Weekly announcements</p>
+        <h2>{{ latest.data.title }}</h2>
+        <p>{{ latest | postSummary(220) }}</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-gold btn-lg" href="{{ latest.url }}">Read announcements</a>
+        <a class="btn btn-light" href="/announcements/">All posts</a>
+      </div>
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow eyebrow--gold">For cadets &amp; families</p>
+      <h2>Quick links</h2>
+    </div>
+    <div class="link-tiles">
+      <a class="card link-tile" href="/calendar/"><span class="link-tile-icon">{% icon "calendar" %}</span><span><strong>Squadron calendar</strong><span>Every training night and activity – and subscribe on your phone.</span></span></a>
+      <a class="card link-tile" href="/contact/#absence"><span class="link-tile-icon">{% icon "user-x" %}</span><span><strong>Report an absence</strong><span>Let the squadron know by email or text.</span></span></a>
+      <a class="card link-tile" href="/supply/"><span class="link-tile-icon">{% icon "package" %}</span><span><strong>Supply &amp; uniforms</strong><span>Dress guides, how-to videos and exchanges.</span></span></a>
+      <a class="card link-tile" href="/parents/"><span class="link-tile-icon">{% icon "help" %}</span><span><strong>Parents &amp; new cadets</strong><span>What to expect, what to wear and cadet terms explained.</span></span></a>
+      <a class="card link-tile" href="/training/#ground-school"><span class="link-tile-icon">{% icon "send" %}</span><span><strong>Ground school</strong><span>The path to the Glider and Power Pilot courses.</span></span></a>
+      <a class="card link-tile" href="/training/#scholarships"><span class="link-tile-icon">{% icon "award" %}</span><span><strong>Scholarships &amp; PAMRA</strong><span>Post-secondary awards for cadets.</span></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section anniv-band">
+  <div class="container split">
+    <div class="anniv-num">80<small>1946 – 2026</small></div>
+    <div>
+      <p class="eyebrow">395 Squadron Alumni Association</p>
+      <h2>Celebrating 80 Years of Excellence</h2>
+      <p>Formed on April 11, 1946, 395 is one of a handful of squadrons formed right after the war – and the only one still active. Thank you to everyone who joined the 80th Anniversary reunion banquet and commemorative parade.</p>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="/80th-anniversary/">80th Anniversary</a>
+        <a class="btn btn-light" href="/squadron-history/">Squadron history</a>
+        <a class="btn btn-light" href="/join-alumni/">Join the alumni</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="partner-strip">
+      <a class="partner" href="{{ site.sponsor.url }}" rel="noopener"><img src="/assets/img/history/rotary-edmonton-west.jpg" alt="" width="64" height="64" loading="lazy"><span><strong>{{ site.sponsor.name }}</strong><span>Squadron sponsor since 1980</span></span></a>
+      <a class="partner" href="{{ site.affiliation.url }}" rel="noopener"><img src="/assets/img/history/417-squadron-badge.png" alt="" width="64" height="64" loading="lazy"><span><strong>417 Squadron, CFB Cold Lake</strong><span>Affiliated unit since 1993</span></span></a>
+      <a class="partner" href="https://aircadetleague.com/" rel="noopener"><span class="partner-icon">{% icon "award" %}</span><span><strong>Air Cadet League of Canada</strong><span>Civilian partner of the cadet program</span></span></a>
+    </div>
+  </div>
+</section>

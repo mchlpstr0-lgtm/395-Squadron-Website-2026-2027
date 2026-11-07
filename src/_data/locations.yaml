@@ -1,0 +1,24 @@
+# Places the squadron uses often. Refer to them in events.yaml by the key (left side).
+nonsuch:
+  name: HMCS Nonsuch
+  address: 11807 Kingsway NW, Edmonton, AB T5G 2W5
+aam:
+  name: Alberta Aviation Museum (504 Hangar)
+  address: 11410 Kingsway NW, Edmonton, AB
+jefferson:
+  name: Jefferson Armouries
+  address: 11630 109 St NW, Edmonton, AB
+central-lions:
+  name: Central Lions Senior Center
+  address: 11113 113 St NW, Edmonton, AB
+maranatha:
+  name: Maranatha Christian Reformed Church
+  address: 11905 47 St NW, Edmonton, AB
+beverly-cenotaph:
+  name: Beverly Cenotaph
+  address: 4001 118 Ave NW, Edmonton, AB
+millwoods-tc:
+  name: Mill Woods Town Centre
+  address: 2331 66 St NW, Edmonton, AB
+kensington-bingo:
+  name: Kensington Bingo Hall

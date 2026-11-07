@@ -1,0 +1,58 @@
+---
+layout: layouts/base.njk
+bodyClass: is-post
+---
+{%- set posts = collections.posts %}
+{%- set idx = -1 %}
+{%- for p in posts %}{% if p.url == page.url %}{% set idx = loop.index0 %}{% endif %}{% endfor %}
+{%- set newer = posts[idx - 1] if idx > 0 else null %}
+{%- set older = posts[idx + 1] if idx + 1 < posts.length else null %}
+<article class="post" itemscope itemtype="https://schema.org/Article">
+  <header class="page-hero page-hero--post">
+    <div class="container page-hero-inner">
+      <p class="eyebrow"><a href="/announcements/">Announcements</a></p>
+      <h1 itemprop="headline">{{ title }}</h1>
+      <p class="post-meta">
+        <span>{% icon "calendar" %} Posted <time datetime="{{ page.date | isoDate }}" itemprop="datePublished">{{ page.date | date("long") }}</time></span>
+        {%- if author %}<span>{% icon "users" %} {{ author }}</span>{% endif %}
+      </p>
+    </div>
+  </header>
+
+  <div class="container post-layout">
+    <div class="post-main">
+      {%- if idx == 0 %}
+      <p class="post-current-badge">{% icon "star" %} Latest announcement</p>
+      {%- endif %}
+      <div class="prose" itemprop="articleBody">
+        {{ content | safe }}
+      </div>
+      <div class="post-actions">
+        <button type="button" class="btn btn-ghost" data-print>{% icon "printer" %} Print</button>
+        <button type="button" class="btn btn-ghost" data-share data-share-title="{{ title }} – 395 Squadron">{% icon "link" %} Share / copy link</button>
+      </div>
+      <nav class="post-nav" aria-label="More announcements">
+        {%- if older %}<a class="post-nav-link post-nav-older" href="{{ older.url }}">{% icon "arrow-left" %}<span><small>Older</small>{{ older.data.title }}</span></a>{% else %}<span></span>{% endif %}
+        {%- if newer %}<a class="post-nav-link post-nav-newer" href="{{ newer.url }}"><span><small>Newer</small>{{ newer.data.title }}</span>{% icon "arrow-right" %}</a>{% endif %}
+      </nav>
+    </div>
+
+    <aside class="post-aside" aria-label="Squadron quick info">
+      <div class="card aside-card">
+        <h2 class="aside-heading">Contact the squadron</h2>
+        <ul class="icon-list" role="list">
+          <li>{% icon "mail" %}<a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>{% icon "phone" %}<a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a> <small>(call or text)</small></li>
+          <li>{% icon "clock" %}<span>{{ site.paradeNight.label }}<br><small>{{ site.address.building }}</small></span></li>
+        </ul>
+        <a class="btn btn-primary btn-block" href="/contact/#absence">{% icon "user-x" %} Report an absence</a>
+      </div>
+      <div class="card aside-card" data-upcoming-wrap>
+        <h2 class="aside-heading">Coming up</h2>
+        {% set list = calendar.events | upcoming %}
+        {% include "partials/upcoming-list.njk" %}
+        <a class="text-link" href="/calendar/">Full calendar {% icon "arrow-right", "icon-sm" %}</a>
+      </div>
+    </aside>
+  </div>
+</article>

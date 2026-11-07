@@ -1,0 +1,90 @@
+---
+layout: layouts/page.njk
+title: Calendar
+heading: Squadron Calendar
+eyebrow: Schedule
+intro: Every training night, activity, parade and deadline in one place. Click an event for details, or subscribe so the schedule appears in your own calendar app.
+description: 395 Squadron Air Cadets calendar – training nights, band, ground school, karate, field training exercises, parades and deadlines. Subscribe in Google, Apple or Outlook calendar.
+permalink: /calendar/
+scripts: ["/assets/js/calendar.js"]
+---
+<div data-calendar>
+  <div class="cal-toolbar" data-cal-toolbar hidden>
+    <div class="cal-nav">
+      <button type="button" class="icon-btn" data-cal-prev aria-label="Previous month">{% icon "chevron-left" %}</button>
+      <h2 class="cal-title" data-cal-title aria-live="polite"></h2>
+      <button type="button" class="icon-btn" data-cal-next aria-label="Next month">{% icon "chevron-right" %}</button>
+      <button type="button" class="btn btn-ghost btn-sm" data-cal-today>Today</button>
+    </div>
+    <div class="seg" role="group" aria-label="Calendar view">
+      <button type="button" data-cal-view="month" aria-pressed="true">{% icon "grid" %} Month</button>
+      <button type="button" data-cal-view="list" aria-pressed="false">{% icon "list" %} List</button>
+    </div>
+  </div>
+  <div class="cal-filters" data-cal-filters role="group" aria-label="Show event types" hidden>
+    {%- for c in calendar.categories %}
+    <button type="button" class="cal-filter" style="--cat: {{ c.color }}" data-cat="{{ c.key }}" aria-pressed="true">{{ c.label }}</button>
+    {%- endfor %}
+  </div>
+
+  <div data-cal-view-root>
+    {#- No-JavaScript / search-engine version: the complete agenda. -#}
+    <div class="cal-agenda">
+      {%- for m in calendar.events | groupByMonth %}
+      <section class="cal-month" aria-labelledby="m-{{ m.key }}">
+        <h2 id="m-{{ m.key }}">{{ m.label }}</h2>
+        {%- for e in m.events %}
+        <article class="agenda-event{% if e.cancelled %} is-cancelled{% endif %}" id="{{ e.id }}" style="--cat: {{ e.categoryColor }}">
+          <span class="cat-tag">{{ e.categoryLabel }}</span>
+          <h3>{{ e.title }}{% if e.cancelled %} – CANCELLED{% endif %}</h3>
+          <p class="agenda-meta"><span>{% icon "calendar" %} {{ e.dateLabel }}</span><span>{% icon "clock" %} {{ e.whenLabel }}</span>{% if e.location %}<span>{% icon "pin" %} <a href="{{ e.location.mapsUrl }}" rel="noopener">{{ e.location.name }}</a></span>{% endif %}</p>
+          {%- if e.lines.length %}<ul class="agenda-lines">{% for l in e.lines %}<li>{{ l | safe }}</li>{% endfor %}</ul>{% endif %}
+        </article>
+        {%- endfor %}
+      </section>
+      {%- else %}
+      <p class="cal-empty">No events have been posted yet.</p>
+      {%- endfor %}
+    </div>
+  </div>
+</div>
+
+<section class="card subscribe-box" id="subscribe" aria-labelledby="sub-h" style="scroll-margin-top:100px">
+  <div>
+    <h2 id="sub-h">{% icon "calendar" %} Subscribe to the squadron calendar</h2>
+    <p>Add the calendar to your phone once and new events show up automatically whenever the squadron posts them.</p>
+    <div class="copy-field">
+      <label class="visually-hidden" for="ics-url">Calendar feed address</label>
+      <input type="text" id="ics-url" readonly value="{{ '/calendar.ics' | absoluteUrl(site.url) }}" data-ics-url>
+      <button type="button" class="btn btn-ghost" data-copy="#ics-url">{% icon "copy" %} Copy</button>
+    </div>
+  </div>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="{{ '/calendar.ics' | absoluteUrl(site.url) | replace('https://', 'webcal://') | replace('http://', 'webcal://') }}" data-sub="webcal">Apple / Outlook</a>
+    <a class="btn btn-gold" href="https://calendar.google.com/calendar/render?cid={{ ('/calendar.ics' | absoluteUrl(site.url) | replace('https://', 'webcal://')) | urlencode }}" data-sub="google" rel="noopener">Google Calendar</a>
+    <a class="btn btn-ghost" href="/calendar.ics" download>{% icon "download" %} .ics file</a>
+  </div>
+</section>
+
+<dialog class="event-dialog" data-event-dialog aria-labelledby="ev-title">
+  <div class="event-dialog-head">
+    <span class="cat-tag" data-ev-cat></span>
+    <h2 id="ev-title" data-ev-title></h2>
+    <button type="button" class="icon-btn event-dialog-close" data-ev-close aria-label="Close">{% icon "close" %}</button>
+  </div>
+  <div class="event-dialog-body">
+    <ul class="icon-list" role="list">
+      <li>{% icon "calendar" %}<span data-ev-date></span></li>
+      <li>{% icon "clock" %}<span data-ev-time></span></li>
+      <li data-ev-loc-row>{% icon "pin" %}<span data-ev-loc></span></li>
+    </ul>
+    <ul class="details" data-ev-lines></ul>
+    <div class="event-dialog-actions">
+      <button type="button" class="btn btn-primary btn-sm" data-ev-ics>{% icon "download" %} Add to calendar</button>
+      <a class="btn btn-gold btn-sm" data-ev-google rel="noopener" target="_blank">Google Calendar</a>
+      <button type="button" class="btn btn-ghost btn-sm" data-ev-copy>{% icon "link" %} Copy link</button>
+    </div>
+  </div>
+</dialog>
+
+<script type="application/json" id="calendar-data">{{ calendar.events | json | safe }}</script>

@@ -1,0 +1,73 @@
+---
+layout: layouts/page.njk
+title: Supply
+heading: Uniform Supply
+eyebrow: Uniforms &amp; kit
+intro: Within the Air Cadet Program there are 2 uniforms the cadets will receive. How to wear the uniform is just as important as how to take care of it.
+description: 395 Squadron uniform supply – issue, exchanges, dress guides for the C3 blue uniform and C5 training uniform, and how-to videos.
+permalink: /supply/
+---
+<div class="split">
+  <div class="prose">
+    <h2 style="margin-top:0">Uniform issue</h2>
+    <p>The majority of Field Training Uniform (FTU) has been issued. For those who do not have this uniform yet, Supply staff will come and get you on a Tuesday night when they are able to issue this uniform.</p>
+    <p>You will be issued your blue Service Dress uniform in a couple of months on a regular Tuesday night during a one-on-one appointment with supply staff. There are over 75 new cadets and the Service Dress uniform takes time to size, so be patient as it will take several months to issue everyone their blue uniform. Supply staff will find you when your turn comes up for kitting.</p>
+    <p>Ongoing correspondence will be done through your <strong>Cadet365</strong> account.</p>
+  </div>
+  <div class="card card-pad">
+    <h2 class="aside-heading">{% icon "file" %} Dress guides</h2>
+    <p>There are 2 documents to refer to on how to wear each uniform.</p>
+    <ul class="doc-list" role="list">
+      <li><a class="doc-link" href="/s/Blue-Uniform-C3.docx"><span class="doc-icon">{% icon "file" %}</span><span><span class="doc-name">Blue Uniform – C3</span><span class="doc-meta">Word document · 640 KB</span></span>{% icon "download", "icon-dl" %}</a></li>
+      <li><a class="doc-link" href="/s/Training-Uniform-C5.docx"><span class="doc-icon">{% icon "file" %}</span><span><span class="doc-name">Training Uniform – C5</span><span class="doc-meta">Word document · 150 KB</span></span>{% icon "download", "icon-dl" %}</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="grid grid-2" style="margin-top:2.5rem">
+  <section class="card card-pad">
+    <h2 class="aside-heading">{% icon "users" %} Returning cadets</h2>
+    <ul class="check-list">
+      <li>Wash your uniforms on a regular basis. Remember to hang it up as well.</li>
+      <li>Uniform exchanges will begin in November again. Bring in all cleaned/washed uniform parts needing exchanges to the unit on Tuesday night.</li>
+      <li>Any uniform parts being exchanged need to be washed before the exchange takes place.</li>
+    </ul>
+  </section>
+  <section class="card card-pad">
+    <h2 class="aside-heading">{% icon "user-plus" %} New cadets</h2>
+    <p>Until you receive your uniform you will wear:</p>
+    <ul class="check-list">
+      <li>A white collared shirt</li>
+      <li>Black pants (no sweats or gym style clothes)</li>
+      <li>Sturdy shoes</li>
+      <li>Bring a pen/pencil and notebook</li>
+    </ul>
+    <p>Please talk to your Level Officer if you have questions about the dress expectations. Supply will come and find you when they have time to get you your uniform.</p>
+  </section>
+</div>
+
+<section style="margin-top:3rem" aria-labelledby="videos-h">
+  <h2 id="videos-h">How-to videos</h2>
+  <p class="lead">Short videos on lacing, polishing, ironing and wearing your uniform properly.</p>
+  <div class="video-grid">
+    {%- for v in supplyVideos %}
+    <article class="card video-card">
+      <div class="video-embed">
+        <button type="button" class="video-poster" data-youtube="{{ v.id }}" aria-label="Play video: {{ v.title }}">
+          <img src="https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="play">{% icon "play" %}</span>
+        </button>
+      </div>
+      <div class="video-card-body">
+        <h3>{{ v.title }}</h3>
+        {%- if v.note %}<p>{{ v.note }}</p>{% endif %}
+        <a class="text-link" href="https://www.youtube.com/watch?v={{ v.id }}" rel="noopener">Watch on YouTube {% icon "external", "icon-sm" %}</a>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<div class="callout" style="margin-top:3rem">
+  <p><strong>Leaving cadets?</strong> Uniforms are squadron property and must be returned. Uniforms can be returned on a Tuesday evening during regular training hours. Please also <a href="/contact/#leaving">let us know you’re leaving</a>.</p>
+</div>

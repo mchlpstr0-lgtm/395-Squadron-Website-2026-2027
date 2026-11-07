@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+<header class="page-hero{% if heroImage %} page-hero--image{% endif %}">
+  {%- if heroImage %}
+  <img class="page-hero-img" src="{{ heroImage }}" alt="" {% if heroPosition %}style="object-position: {{ heroPosition }}"{% endif %}>
+  {%- endif %}
+  <div class="container page-hero-inner">
+    {%- if eyebrow %}<p class="eyebrow">{{ eyebrow }}</p>{% endif %}
+    <h1>{{ heading or title }}</h1>
+    {%- if intro %}<p class="lead">{{ intro | safe }}</p>{% endif %}
+  </div>
+</header>
+<div class="page-body {{ bodyWidth or 'container' }}">
+  {{ content | safe }}
+</div>

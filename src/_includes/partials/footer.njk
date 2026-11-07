@@ -1,0 +1,53 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <section class="footer-brand" aria-label="About the squadron">
+      <img src="/assets/img/brand/crest-240.png" width="100" height="120" alt="395 Squadron crest" loading="lazy">
+      <div>
+        <p class="footer-name">395 Edmonton “{{ site.nickname }}” Squadron</p>
+        <p class="footer-sub">Royal Canadian Air Cadets · Est. {{ site.founded }}</p>
+        <p class="footer-motto">“{{ site.motto }}”</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="f-visit">
+      <h2 id="f-visit" class="footer-heading">Visit us</h2>
+      <address>
+        <a href="{{ site.address.mapQuery | mapsUrl }}" rel="noopener">{{ site.address.building }}<br>{{ site.address.street }}<br>{{ site.address.city }}, {{ site.address.province }} {{ site.address.postal }}</a>
+      </address>
+      <p class="footer-parade"><strong>Parade night:</strong> {{ site.paradeNight.label }}</p>
+    </section>
+
+    <section aria-labelledby="f-contact">
+      <h2 id="f-contact" class="footer-heading">Contact</h2>
+      <ul class="footer-list" role="list">
+        <li><a href="tel:{{ site.phoneHref }}">{% icon "phone" %} {{ site.phone }}</a></li>
+        <li><a href="mailto:{{ site.email }}">{% icon "mail" %} {{ site.email }}</a></li>
+        <li><a href="{{ site.social.facebook }}" rel="noopener">{% icon "facebook" %} Facebook</a></li>
+        <li><a href="{{ site.social.instagram }}" rel="noopener">{% icon "instagram" %} Instagram</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="f-links">
+      <h2 id="f-links" class="footer-heading">Quick links</h2>
+      <ul class="footer-list" role="list">
+        <li><a href="/contact/#absence">Report an absence</a></li>
+        <li><a href="/calendar/">Calendar</a> · <a href="/calendar.ics">Subscribe</a></li>
+        <li><a href="/announcements/">Announcements</a> · <a href="/announcements/feed.xml">RSS</a></li>
+        <li><a href="/parents/">Parents &amp; new cadets</a></li>
+        <li><a href="/join/">Join 395 Squadron</a></li>
+        <li><a href="/join-alumni/">Alumni Association</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="container footer-partners">
+    <p>Proudly sponsored by the <a href="{{ site.sponsor.url }}" rel="noopener">{{ site.sponsor.name }}</a> and affiliated with <a href="{{ site.affiliation.url }}" rel="noopener">{{ site.affiliation.name }}</a>.</p>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© Copyright 2012 – {% year %} · {{ site.name }} · All Rights Reserved</p>
+      <p><a href="#main" class="back-to-top">Back to top ↑</a></p>
+    </div>
+  </div>
+</footer>

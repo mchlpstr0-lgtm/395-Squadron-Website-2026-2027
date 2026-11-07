@@ -1,0 +1,27 @@
+---
+layout: layouts/page.njk
+title: Newsletters
+heading: Alumni Association Newsletters
+eyebrow: Alumni
+intro: Click below to read the 395 Squadron Alumni Association newsletters – news, memories and updates from former cadets, staff and officers since 2011.
+description: 395 Squadron Alumni Association newsletters from 2011 to today (PDF).
+permalink: /newsletters/
+---
+<div class="split">
+  <ul class="doc-list" role="list">
+    {%- for n in newsletters %}
+    <li><a class="doc-link{% if loop.first %} is-latest{% endif %}" href="{{ n.file }}"><span class="doc-icon">{% icon "file" %}</span><span><span class="doc-name">{{ n.title }}{% if loop.first %}<span class="badge">Latest</span>{% endif %}</span><span class="doc-meta">PDF · {{ n.size }}</span></span>{% icon "download", "icon-dl" %}</a></li>
+    {%- endfor %}
+  </ul>
+  <aside>
+    <figure class="figure">
+      <img src="/assets/img/alumni/newsletters-over-the-years.jpg" alt="A collage of 395 Squadron newsletters over the years" loading="lazy">
+      <figcaption>Newsletters over the years.</figcaption>
+    </figure>
+    <div class="card card-pad" style="margin-top:1.25rem">
+      <h2 class="aside-heading">Get the next issue</h2>
+      <p>Alumni Association members receive updates about alumni events and newsletters.</p>
+      <a class="btn btn-primary" href="/join-alumni/">Join the Alumni Association</a>
+    </div>
+  </aside>
+</div>

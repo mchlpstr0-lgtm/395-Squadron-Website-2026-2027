@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="{{ site.lang }}" data-base="{{ env.base }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- set pageTitle = (title + " | " + site.shortName + " Air Cadets") if (title and page.url != "/") else (site.name) %}
+  {%- set pageDesc = description or site.description %}
+  {%- set ogImage = (ogImage or "/assets/img/brand/og-image.jpg") | absoluteUrl(site.url) %}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDesc }}">
+  <link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}">
+  <meta property="og:type" content="{{ 'article' if layout == 'layouts/post.njk' else 'website' }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:description" content="{{ pageDesc }}">
+  <meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}">
+  <meta property="og:image" content="{{ ogImage }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#12234a">
+  <link rel="icon" href="/assets/img/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/brand/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.shortName }} announcements" href="/announcements/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css?v={{ build.version }}">
+  <script>
+    /* Apply the saved light/dark preference before the page paints. */
+    try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+    document.documentElement.classList.add("js");
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": {{ site.name | json | safe }},
+    "alternateName": "395 Edmonton Griffon Squadron",
+    "url": {{ site.url | json | safe }},
+    "logo": {{ "/assets/img/brand/crest.png" | absoluteUrl(site.url) | json | safe }},
+    "foundingDate": "{{ site.founded }}",
+    "email": {{ site.email | json | safe }},
+    "telephone": {{ site.phoneHref | json | safe }},
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": {{ site.address.street | json | safe }},
+      "addressLocality": "{{ site.address.city }}",
+      "addressRegion": "{{ site.address.province }}",
+      "postalCode": "{{ site.address.postal }}",
+      "addressCountry": "CA"
+    },
+    "sameAs": [{{ site.social.facebook | json | safe }}, {{ site.social.instagram | json | safe }}]
+  }
+  </script>
+  {%- block head %}{% endblock %}
+</head>
+<body class="{{ bodyClass or '' }}">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  {% include "partials/topbar.njk" %}
+  {% include "partials/header.njk" %}
+  {% include "partials/alert.njk" %}
+  <main id="main" tabindex="-1">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  <script src="/assets/js/main.js?v={{ build.version }}" defer></script>
+  {%- for s in scripts %}
+  <script src="{{ s }}?v={{ build.version }}" defer></script>
+  {%- endfor %}
+</body>
+</html>

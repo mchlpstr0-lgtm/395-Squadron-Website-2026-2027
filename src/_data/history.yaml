@@ -1,0 +1,77 @@
+# Lists used on the Squadron History page.
+commandingOfficers:
+  - { years: "1946", name: "J. A. Reilly" }
+  - { years: "1946 – 1947", name: "Squadron Leader Frank J. Edwards" }
+  - { years: "1947 – 1948", name: "Acting Squadron Leader George Chelmick" }
+  - { years: "1948 – 1979", name: "Squadron Leader / Major Frank H. Mathew, OMM, CD2" }
+  - { years: "1979 – 1986", name: "Major Brian Andrus, CD" }
+  - { years: "1986 – 1989", name: "Captain Dan Sereda" }
+  - { years: "1989 – 1992", name: "Captain Tom Lawrence" }
+  - { years: "1992 – 1994", name: "Major Stephen Wakeman, CD" }
+  - { years: "1994 – 1997", name: "Acting Major Jim Speed, CD" }
+  - { years: "1997 – 1999", name: "Acting Major Bob Bogovics" }
+  - { years: "1999 – 2002", name: "Major Brian Andrus, CD" }
+  - { years: "2002 – 2006", name: "Major Imre Bogovics, CD2" }
+  - { years: "2006 – 2010", name: "Major Don Ste Croix, CD2" }
+  - { years: "2010 – 2013", name: "Acting Major John Breen, CD" }
+  - { years: "2013 – 2016", name: "Acting Major Andrew McLellan" }
+  - { years: "2016 – 2018", name: "Major Chris Duncan, CD" }
+  - { years: "2018 – 2021", name: "Acting Major Graham Pilkington, CD" }
+  - { years: "2021 – 2024", name: "Acting Major Brittney Pilkington, CD" }
+  - { years: "2024 –", name: "Captain Deb Smart, CD", current: true }
+
+trips:
+  - { year: "1964", text: "15 cadets to Vancouver" }
+  - { year: "1966", text: "20 cadets to Los Angeles, USA" }
+  - { year: "1967", text: "20 cadets to England and France" }
+  - { year: "1968 – 98", text: "Annual Banff/Jasper Trip held during the first week in February" }
+  - { year: "1970", text: "20 cadets to Los Angeles, USA" }
+  - { year: "1977", text: "20 cadets to Comox, BC and N.W. United States" }
+  - { year: "1979", text: "40 cadets exchange trip (562 Cabot N. Sydney) to Nova Scotia" }
+  - { year: "1982", text: "31 cadets to Fairchild and McChord Air Force Bases in the USA" }
+  - { year: "1983", text: "7 cadets exchange trip to Scotland" }
+  - { year: "1986", text: "39 cadets to Abbotsford Airshow, Expo 86 in Vancouver, and Victoria" }
+  - { year: "1988", text: "38 cadets to 4 US Air Force and Navy bases in Washington State" }
+  - { year: "1992", text: "55 cadets to Vancouver and the N.W. United States" }
+  - { year: "1993", text: "15 cadets exchange trip to England and Scotland" }
+  - { year: "1995", text: "Hosted exchange cadets from East Essex Wing, Air Training Corps, GB" }
+  - { year: "1996", text: "37 cadets to Vancouver, Esquimalt and Vancouver Island" }
+  - { year: "1999", text: "40 cadets to Seattle, McChord AFB, Fairchild AFB, Whidbey Island Naval Air Station" }
+  - { year: "2001", text: "40 cadets to California, Edwards AFB" }
+  - { year: "2003", text: "40 cadets to Seattle, McChord AFB, Fairchild AFB, Whidbey Island Naval Air Station" }
+  - { year: "2005", text: "40 cadets to Seattle, McChord AFB, Fairchild AFB, Whidbey Island Naval Air Station" }
+  - { year: "2007", text: "39 cadets on Banff/Calgary area trip during Family Day Long Weekend" }
+  - { year: "2008", text: "40 cadets to Victoria and Vancouver Island during Spring Break" }
+  - { year: "2009", text: "40 cadets Banff/Calgary area trip during Spring Break" }
+  - { year: "2009", text: "40 cadets to Cold Lake AFB during Spring Break" }
+  - { year: "2010", text: "39 cadets to Montreal and Quebec City during Spring Break" }
+  - { year: "2011", text: "50 cadets to CFB Cold Lake during Spring Break" }
+  - { year: "2012", text: "37 cadets to Ottawa and CFB Trenton during Spring Break" }
+  - { year: "2014", text: "38 cadets to San Diego, California, USA, Spring Break" }
+  - { year: "2015", text: "40 cadets to 4 Wing Cold Lake during Spring Break" }
+  - { year: "2016", text: "40 cadets to Nova Scotia during Spring Break" }
+  - { year: "2018", text: "40 cadets to Ottawa during Spring Break" }
+
+achievements:
+  - { year: "1974", text: "Provincial Jr. Drill Team" }
+  - { year: "1989", text: "City Sr. Basketball" }
+  - { year: "1990", text: "Central Zone Sr. Basketball" }
+  - { year: "1991", text: "Provincial Sr. Basketball" }
+  - { year: "1992", text: "Provincial Jr. Basketball – 2nd place" }
+  - { year: "1993", text: "City Sr. & Jr. Volleyball" }
+  - { year: "1994", text: "City Jr. Basketball" }
+  - { year: "1996", text: "Central Zone Jr. Basketball & Provincial Jr. Volleyball" }
+  - { year: "1997", text: "2nd in Central Zone Sr. Volleyball" }
+  - { year: "1998", text: "2nd in Central Zone Sr. Volleyball" }
+  - { year: "1999", text: "2nd in Central Zone Sr. Volleyball" }
+  - { year: "2001", text: "1st in NE Zone Compulsory Drill Competition" }
+  - { year: "2002", text: "1st in NE Zone Compulsory Drill Competition" }
+  - { year: "2003", text: "1st in NE Zone Compulsory Drill Competition" }
+  - { year: "2004", text: "2nd in NE Zone Jr. Volleyball; 2nd in NE Zone Sr. Volleyball; 2nd in NE Zone Sr. Basketball" }
+  - { year: "2005", text: "2nd in NE Zone Jr. Volleyball; 2nd in NE Zone Sr. Volleyball; 1st in NE Zone Precision Drill Competition" }
+  - { year: "2006", text: "3rd in NE Zone Jr. Basketball; 2nd in NE Zone Sr. Basketball; 2nd in NE Zone Jr. Volleyball; 1st in NE Zone Compulsory Drill Competition" }
+  - { year: "2007", text: "1st in NE Zone Compulsory Drill Competition; 1st in NE Zone Sr. Volleyball; 2nd in NE Zone Jr. Volleyball; 3rd in NE Zone Sr. Basketball; 3rd in NE Zone Jr. Basketball" }
+  - { year: "2008", text: "2nd in NE Zone Jr. Volleyball; 2nd in NE Zone Sr. Volleyball; 2nd in NE Zone Sr. Basketball; 2nd in NE Zone Compulsory Drill Competition" }
+  - { year: "2011", text: "2nd in Lord Strathcona Trust Fund Drill Competition: Edmonton (Group A)" }
+  - { year: "2012", text: "2nd in Lord Strathcona Trust Fund Drill Competition: Edmonton NW; 2nd in Basketball and 2nd in Volleyball at the Lord Strathcona Trust Fund Sports Competition: Edmonton NW" }
+  - { year: "2014", text: "1st in Volleyball, 1st in Junior Basketball and 3rd in Senior Basketball at the Lord Strathcona Trust Fund Sports Competition: Edmonton NW" }

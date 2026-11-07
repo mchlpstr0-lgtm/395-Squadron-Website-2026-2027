@@ -1,0 +1,40 @@
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="{{ site.name }} – home">
+      <img class="brand-crest" src="/assets/img/brand/crest-240.png" width="200" height="240" alt="">
+      <span class="brand-text">
+        <span class="brand-name">395 Edmonton <span class="brand-nick">“{{ site.nickname }}”</span> Squadron</span>
+        <span class="brand-sub">Royal Canadian Air Cadets</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      {% icon "menu", "icon-open" %}{% icon "close", "icon-close" %}<span class="nav-toggle-label">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main" data-nav>
+      <ul class="nav-list" role="list">
+        {%- for item in navigation.main %}
+        {%- set active = (page.url == "/") if item.url == "/" else page.url.startsWith(item.url) %}
+        {%- if item.children %}
+        {%- set childActive = false %}
+        {%- for c in item.children %}{% if page.url.startsWith(c.url) %}{% set childActive = true %}{% endif %}{% endfor %}
+        <li class="nav-item has-children{% if childActive %} is-active{% endif %}">
+          <button type="button" class="nav-link nav-parent" aria-expanded="false" data-submenu-toggle>
+            {{ item.title }} {% icon "chevron-down", "icon-sm" %}
+          </button>
+          <ul class="subnav" role="list">
+            {%- for c in item.children %}
+            <li><a class="subnav-link" href="{{ c.url }}"{% if page.url == c.url %} aria-current="page"{% endif %}>{{ c.title }}</a></li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- else %}
+        <li class="nav-item{% if active %} is-active{% endif %}">
+          <a class="nav-link" href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+        </li>
+        {%- endif %}
+        {%- endfor %}
+        <li class="nav-item nav-cta"><a class="btn btn-gold" href="{{ navigation.cta.url }}">{{ navigation.cta.title }}</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

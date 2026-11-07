@@ -1,0 +1,25 @@
+---
+permalink: /announcements/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-CA">
+  <title>{{ site.shortName }} Air Cadets – Announcements</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="{{ '/announcements/feed.xml' | absoluteUrl(site.url) }}" rel="self"/>
+  <link href="{{ '/announcements/' | absoluteUrl(site.url) }}"/>
+  <id>{{ '/announcements/' | absoluteUrl(site.url) }}</id>
+  <updated>{{ (collections.posts[0].date if collections.posts.length else build.time) | isoDate }}</updated>
+  <icon>{{ '/assets/img/brand/icon-192.png' | absoluteUrl(site.url) }}</icon>
+  {%- for post in collections.posts | limit(20) %}
+  {%- set abs = post.url | absoluteUrl(site.url) %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ abs }}"/>
+    <id>{{ abs }}</id>
+    <updated>{{ post.date | isoDate }}</updated>
+    <author><name>{{ post.data.author or site.shortName }}</name></author>
+    <summary>{{ post | postSummary(300) }}</summary>
+  </entry>
+  {%- endfor %}
+</feed>

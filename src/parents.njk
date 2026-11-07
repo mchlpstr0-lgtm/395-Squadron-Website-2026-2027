@@ -1,0 +1,141 @@
+---
+layout: layouts/page.njk
+title: Parents & New Cadets
+heading: Parents &amp; New Cadets Guide
+eyebrow: Welcome to the squadron
+heroImage: /assets/img/home/make-friends.jpg
+intro: Everything a new cadet and their family needs to know – when we meet, what to wear, how to report an absence, how to stay connected and what all the acronyms mean.
+description: A guide for parents, guardians and new cadets at 395 Squadron – schedule, dress, absences, uniforms, fundraising, ranks and a glossary of cadet terms.
+permalink: /parents/
+---
+<nav class="jump-nav" aria-label="On this page">
+  <a class="chip" href="#first-weeks">First weeks</a>
+  <a class="chip" href="#week">A typical week</a>
+  <a class="chip" href="#absences">Absences</a>
+  <a class="chip" href="#costs">Costs &amp; fundraising</a>
+  <a class="chip" href="#connected">Stay connected</a>
+  <a class="chip" href="#ranks">Ranks</a>
+  <a class="chip" href="#glossary">Glossary</a>
+</nav>
+
+<section id="first-weeks" aria-labelledby="fw-h" class="split" style="scroll-margin-top:100px">
+  <div>
+    <h2 id="fw-h">Your first weeks</h2>
+    <ul class="check-list">
+      <li><strong>Register and hand in your paperwork.</strong> See <a href="/join/">How to join</a> for the documents you need.</li>
+      <li><strong>Come to parade night.</strong> Regular training is {{ site.paradeNight.label }} at {{ site.address.building }}, {{ site.address.street }}.</li>
+      <li><strong>Dress:</strong> until you receive your uniform, wear a white collared shirt, black pants (no sweats or gym style clothes) and sturdy shoes. Bring a pen/pencil and notebook.</li>
+      <li><strong>Watch for your Cadet365 email.</strong> Credentials are emailed to the main address on file – check junk mail. Parents/guardians may need to help with the initial set-up and Multi-Factor Authentication, but the account is meant for the cadet to use.</li>
+      <li><strong>Complete the health questionnaire</strong> if you receive the digital link. It ensures the squadron has the information it needs to deliver the program safely.</li>
+      <li><strong>Be patient with uniforms.</strong> Supply staff will come and find new cadets on a Tuesday night when it’s their turn to be kitted. See <a href="/supply/">Supply</a>.</li>
+      <li><strong>Subscribe to the <a href="/calendar/#subscribe">squadron calendar</a></strong> so every activity shows up on your phone.</li>
+    </ul>
+  </div>
+  <div class="card card-pad">
+    <h3>{% icon "help" %} Who do I ask?</h3>
+    <ul class="icon-list" role="list">
+      <li>{% icon "mail" %}<span><strong>Anything at all:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></span></li>
+      <li>{% icon "phone" %}<span><strong>Call or text:</strong> <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></span></li>
+      <li>{% icon "users" %}<span><strong>Dress &amp; training questions:</strong> your cadet’s Level Officer</span></li>
+      <li>{% icon "package" %}<span><strong>Uniforms:</strong> Supply staff on Tuesday nights</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="week" aria-labelledby="wk-h" style="scroll-margin-top:100px">
+  <hr>
+  <h2 id="wk-h">A typical week</h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th scope="col">When</th><th scope="col">What</th><th scope="col">Where</th><th scope="col">Who</th></tr></thead>
+      <tbody>
+        <tr><td>Tuesday, 6:15 – 9:15 pm</td><td><strong>Regular training night</strong> – mandatory</td><td>{{ site.address.building }}</td><td>All cadets</td></tr>
+        <tr><td>Monday, 6:30 – 9 pm</td><td>Band training</td><td>Alberta Aviation Museum (504 Hangar)</td><td>Open to all cadets – instruments provided</td></tr>
+        <tr><td>Most Saturdays (in season)</td><td>Karate, drill team, sports &amp; fitness</td><td>Varies – see the calendar</td><td>Open to all cadets</td></tr>
+        <tr><td>As scheduled</td><td>Ground school, marksmanship, biathlon, effective speaking, FTX weekends, parades</td><td>Varies – see the calendar</td><td>As announced / sign-up</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:1rem">Exact dates, times, dress and what to bring are in the <a href="/calendar/">calendar</a> and each month’s <a href="/announcements/">announcement</a>.</p>
+</section>
+
+<section id="absences" aria-labelledby="ab-h" style="scroll-margin-top:100px">
+  <hr>
+  <div class="split">
+    <div>
+      <h2 id="ab-h">Absences &amp; leaving</h2>
+      <p>If your cadet will be absent, email (<a href="mailto:{{ site.email }}">{{ site.email }}</a>) or text ({{ site.phone }}) the squadron. Include the cadet’s <strong>Rank, First and Last Name</strong> and the <strong>Date</strong> they will be absent.</p>
+      <p>If you are no longer attending cadets, email the squadron to let us know – this will start the process of removing you from our database. Uniforms can be returned on a Tuesday evening during regular training hours.</p>
+    </div>
+    <div class="callout callout--info">
+      <p><strong>Shortcut:</strong> our <a href="/contact/#absence">absence form</a> writes the message for you and opens your email or text app with it ready to send.</p>
+    </div>
+  </div>
+</section>
+
+<section id="costs" aria-labelledby="co-h" style="scroll-margin-top:100px">
+  <hr>
+  <h2 id="co-h">Costs &amp; fundraising</h2>
+  <div class="grid grid-3">
+    <div class="card card-pad"><h3>{% icon "check" %} Free to join</h3><p>There is no registration fee to join 395 Squadron, and summer training is free for selected cadets.</p></div>
+    <div class="card card-pad"><h3>{% icon "package" %} Uniforms provided</h3><p>Uniforms are provided free of charge but must be returned when the cadet leaves the program. Cadets are responsible for the care, cleaning and custody of their kit.</p></div>
+    <div class="card card-pad"><h3>{% icon "heart" %} Fundraising</h3><p>Cadets and guardians are asked to take part in fundraising, which pays for activities such as flying, equipment and transportation. The unit runs a bingo once a month at Kensington Bingo Hall – volunteers must be 18 or older.</p></div>
+  </div>
+</section>
+
+<section id="connected" aria-labelledby="sc-h" style="scroll-margin-top:100px">
+  <hr>
+  <h2 id="sc-h">Stay connected</h2>
+  <div class="link-tiles">
+    <a class="card link-tile" href="/calendar/#subscribe"><span class="link-tile-icon">{% icon "calendar" %}</span><span><strong>Calendar subscription</strong><span>Events appear in Google, Apple or Outlook calendar automatically.</span></span></a>
+    <a class="card link-tile" href="/announcements/"><span class="link-tile-icon">{% icon "message" %}</span><span><strong>Monthly announcements</strong><span>Schedule, CO’s update and admin notices. <span class="visually-hidden">RSS available.</span></span></span></a>
+    <a class="card link-tile" href="{{ site.social.facebook }}" rel="noopener"><span class="link-tile-icon">{% icon "facebook" %}</span><span><strong>Facebook</strong><span>facebook.com/395Squadron</span></span></a>
+    <a class="card link-tile" href="{{ site.social.instagram }}" rel="noopener"><span class="link-tile-icon">{% icon "instagram" %}</span><span><strong>Instagram</strong><span>@{{ site.social.instagramHandle }}</span></span></a>
+  </div>
+</section>
+
+<section id="ranks" aria-labelledby="rk-h" style="scroll-margin-top:100px">
+  <hr>
+  <h2 id="rk-h">Air cadet ranks</h2>
+  <p>From most junior to most senior. When you report an absence, include your cadet’s rank.</p>
+  <ol class="rank-list">
+    <li><span><strong>Air Cadet</strong><span>AC</span></span></li>
+    <li><span><strong>Leading Air Cadet</strong><span>LAC</span></span></li>
+    <li><span><strong>Corporal</strong><span>Cpl</span></span></li>
+    <li><span><strong>Flight Corporal</strong><span>FCpl</span></span></li>
+    <li><span><strong>Sergeant</strong><span>Sgt</span></span></li>
+    <li><span><strong>Flight Sergeant</strong><span>FSgt</span></span></li>
+    <li><span><strong>Warrant Officer Second Class</strong><span>WO2</span></span></li>
+    <li><span><strong>Warrant Officer First Class</strong><span>WO1</span></span></li>
+  </ol>
+</section>
+
+<section id="glossary" aria-labelledby="gl-h" style="scroll-margin-top:100px">
+  <hr>
+  <h2 id="gl-h">Cadet terms explained</h2>
+  <div class="glossary-search field">
+    <label for="gl-filter">Filter terms</label>
+    <input type="text" id="gl-filter" placeholder="e.g. FTX, uniform, Teams" data-glossary-filter>
+  </div>
+  <dl class="glossary" data-glossary>
+    {%- for g in glossary %}
+    <div><dt>{{ g.term }}</dt><dd>{{ g.meaning }}</dd></div>
+    {%- endfor %}
+  </dl>
+  <p data-glossary-empty hidden>No matching terms. Ask us at <a href="mailto:{{ site.email }}">{{ site.email }}</a>!</p>
+</section>
+
+<script>
+  (function () {
+    var input = document.querySelector("[data-glossary-filter]");
+    if (!input) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll("[data-glossary] > div"));
+    var empty = document.querySelector("[data-glossary-empty]");
+    input.addEventListener("input", function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function (el) { var m = !q || el.textContent.toLowerCase().indexOf(q) > -1; el.hidden = !m; if (m) shown++; });
+      empty.hidden = shown > 0;
+    });
+  })();
+</script>

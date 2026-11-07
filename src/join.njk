@@ -1,0 +1,92 @@
+---
+layout: layouts/page.njk
+title: Join Now
+heading: How To Join Our Program
+eyebrow: Join 395 Squadron
+heroImage: /assets/img/home/hero-cadets.jpg
+intro: The Royal Canadian Air Cadets is a free national youth program for young people aged 12 to 19. Here’s how to become a member of 395 Squadron.
+description: How to join 395 Edmonton Royal Canadian Air Cadet Squadron – eligibility, registration, documents and contact information.
+permalink: /join/
+---
+{%- if not site.recruiting.open %}
+<div class="callout" role="status"><p><strong>{{ site.recruiting.waitlistMessage }}</strong> Email <a href="mailto:{{ site.email }}?subject=Waitlist%20-%20395%20Squadron">{{ site.email }}</a>.</p></div>
+{%- endif %}
+
+<div class="split">
+  <div>
+    <h2>Register in four steps</h2>
+    <ol class="steps">
+      <li>
+        <h3>Complete the online registration form</h3>
+        <p>Visit the national cadet registration site to submit a registration form for 395 Squadron (unit 179).</p>
+        <p><a class="btn btn-primary" href="{{ site.registrationUrl }}" rel="noopener">Start registration {% icon "external", "icon-sm" %}</a></p>
+      </li>
+      <li>
+        <h3>Gather your documents</h3>
+        <p>Bring the applicant’s <strong>Provincial Healthcare Card</strong> and <strong>ONE</strong> of:</p>
+        <ul class="check-list">
+          <li>Valid Canadian Birth Certificate (not baptismal certificate)</li>
+          <li>Valid Canadian Passport</li>
+          <li>Valid Resident Card</li>
+          <li>Valid identification issued by a Canadian provincial or federal government agency</li>
+        </ul>
+        <p class="hint">If you do not have any of the above documentation, please speak to the administrative office who may provide you with alternatives.</p>
+      </li>
+      <li>
+        <h3>Send us your paperwork</h3>
+        <p>All of the paperwork is available in electronic form, so please feel free to fill in the forms and email them to <a href="mailto:{{ site.email }}">{{ site.email }}</a> – or bring them to the squadron office on a Tuesday night.</p>
+      </li>
+      <li>
+        <h3>Welcome aboard!</h3>
+        <p>Upon completion of your paperwork, and a confirmation email, discussion or phone call, you will have officially joined 395 Edmonton Royal Canadian Air Cadets!</p>
+      </li>
+    </ol>
+    <p>For more information about the cadet program visit <a href="{{ site.cadetsCanadaUrl }}" rel="noopener">www.canada.ca/join-cadets</a>. Email <a href="mailto:{{ site.email }}">{{ site.email }}</a> with any questions you may have – we can walk you through the registration process as well.</p>
+  </div>
+
+  <aside>
+    <div class="card card-pad">
+      <h2 class="aside-heading">Our Office</h2>
+      <ul class="icon-list" role="list">
+        <li>{% icon "pin" %}<span><strong>{{ site.address.building }}</strong><br>{{ site.address.street }}<br>{{ site.address.city }}, {{ site.address.province }} {{ site.address.postal }}<br><a href="{{ site.address.mapQuery | mapsUrl }}" rel="noopener">Get directions</a></span></li>
+        <li>{% icon "phone" %}<a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></li>
+        <li>{% icon "mail" %}<a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li>{% icon "calendar" %}<span><strong>Parade night:</strong> {{ site.office.paradeNight }}<br><strong>Hours:</strong> {{ site.office.hours }}</span></li>
+      </ul>
+      <a class="btn btn-gold btn-block" href="{{ site.registrationUrl }}" rel="noopener">Register online</a>
+    </div>
+    <figure class="card card-pad testimonial">
+      <blockquote><p>“Excellent staff that engage the kids and invest an enormous amount of time and energy in ensuring the best opportunities and experiences for the kids involved in the program.”</p></blockquote>
+      <figcaption>— Google review of 395 Squadron</figcaption>
+    </figure>
+  </aside>
+</div>
+
+<h2 class="section-title">Frequently asked questions</h2>
+<div class="faq">
+  <details open>
+    <summary>Who can join?</summary>
+    <p>The Royal Canadian Air Cadets is a Canadian national youth program for young individuals aged 12 to 19. Registration at 395 Squadron is available for Canadian citizens or lawful residents of Canada who do not belong to another cadet corps or squadron, and are medically, physically and psychologically fit to join Cadets and participate in related training and/or activities.</p>
+  </details>
+  <details>
+    <summary>What is the registration fee to join the cadet program?</summary>
+    <p>There is no registration fee to join 395 Squadron. Uniforms are provided free of charge but must be returned once the cadet leaves the program. Until cadets are issued a uniform they wear black dress pants and a white dress shirt.</p>
+    <p>Cadets and guardians are asked to participate in fundraising activities which allow the unit to participate in the various activities.</p>
+  </details>
+  <details>
+    <summary>How do I join 395 Squadron?</summary>
+    <p>Complete the <a href="{{ site.registrationUrl }}" rel="noopener">online registration form</a>, then bring (or email) the applicant’s Provincial Healthcare Card and one piece of the identification listed above. Below we have all of the paperwork available in electronic form, so please feel free to fill in these forms and email them to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  </details>
+  <details>
+    <summary>When and where is training?</summary>
+    <p>Regular training is every <strong>{{ site.paradeNight.label }}</strong> at {{ site.address.building }}, {{ site.address.street }}. Optional activities such as band, karate, ground school and sports run on other days – see the <a href="/calendar/">calendar</a>.</p>
+  </details>
+  <details>
+    <summary>What should a new cadet wear before getting a uniform?</summary>
+    <p>A white collared shirt, black pants (no sweats or gym style clothes) and sturdy shoes. Bring a pen or pencil and a notebook. Supply staff will find new cadets on a Tuesday night when it’s their turn to be issued a uniform. More on the <a href="/supply/">Supply page</a>.</p>
+  </details>
+  <details>
+    <summary>Can my cadet try different activities?</summary>
+    <p>Yes! New recruits are free to try different activities, as long as once they’ve made a commitment to an activity they attend regularly. See everything on offer on the <a href="/training/">Training page</a>.</p>
+  </details>
+</div>

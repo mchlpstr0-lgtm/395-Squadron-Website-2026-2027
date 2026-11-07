@@ -1,0 +1,81 @@
+{
+  "name": "395 Edmonton Royal Canadian Air Cadet Squadron",
+  "shortName": "395 Squadron",
+  "nickname": "Griffon",
+  "tagline": "Air Cadets in Edmonton, Alberta",
+  "description": "395 Edmonton “Griffon” Royal Canadian Air Cadet Squadron – free aviation, leadership, citizenship and fitness training for youth aged 12 to 19 in Edmonton, Alberta, since 1946.",
+  "url": "https://www.395squadron.ca",
+  "lang": "en-CA",
+  "founded": 1946,
+  "motto": "Supporting Liberty and Justice",
+  "slogan": "Succeed as One",
+
+  "email": "395air@cadets.gc.ca",
+  "phone": "780-619-9756",
+  "phoneHref": "+17806199756",
+  "address": {
+    "building": "HMCS Nonsuch",
+    "street": "11807 Kingsway NW",
+    "city": "Edmonton",
+    "province": "AB",
+    "postal": "T5G 2W5",
+    "country": "Canada",
+    "mapQuery": "HMCS Nonsuch, 11807 Kingsway NW, Edmonton, AB T5G 2W5"
+  },
+  "paradeNight": {
+    "day": "Tuesday",
+    "start": "18:15",
+    "end": "21:15",
+    "label": "Tuesdays, 6:15 – 9:15 pm"
+  },
+  "office": {
+    "paradeNight": "Tuesday",
+    "hours": "6:30 pm to 9:30 pm"
+  },
+  "band": {
+    "day": "Monday",
+    "label": "Mondays, 6:30 – 9 pm",
+    "location": "504 / Alberta Aviation Museum Hangar, 11410 Kingsway NW"
+  },
+
+  "registrationUrl": "https://registration.cadets.gc.ca/get-started.html?unitid=179",
+  "cadetsCanadaUrl": "https://www.canada.ca/join-cadets",
+
+  "social": {
+    "facebook": "https://www.facebook.com/395Squadron",
+    "instagram": "https://www.instagram.com/395_squadron",
+    "instagramHandle": "395_squadron"
+  },
+
+  "alumni": {
+    "name": "395 Squadron Alumni Association",
+    "email": "395alumn@telus.net"
+  },
+
+  "sponsor": {
+    "name": "Rotary Club of Edmonton West",
+    "url": "https://www.rotaryedmontonwest.com/"
+  },
+  "affiliation": {
+    "name": "417 Squadron, 4 Wing Cold Lake",
+    "url": "https://www.canada.ca/en/air-force/corporate/squadrons/417-squadron.html"
+  },
+
+  "recruiting": {
+    "open": true,
+    "waitlistMessage": "At this time 395 RCACS is not accepting new cadets. A waitlist is in effect – email us to be added."
+  },
+
+  "alert": {
+    "show": false,
+    "tone": "info",
+    "message": "Squadron is on stand down from Dec 19 – Jan 4. Training resumes Tuesday, January 5.",
+    "link": "/calendar/",
+    "linkText": "See the calendar",
+    "expires": "2027-01-06"
+  },
+
+  "forms": {
+    "alumniEndpoint": ""
+  }
+}

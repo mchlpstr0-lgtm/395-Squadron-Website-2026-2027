@@ -1,0 +1,14 @@
+{%- if site.alert.show %}
+<div class="site-alert site-alert--{{ site.alert.tone or 'info' }}" role="status" data-alert data-expires="{{ site.alert.expires }}">
+  <div class="container site-alert-inner">
+    {%- set alertIcon = "alert" if site.alert.tone == "warning" else "info" %}
+    {% icon alertIcon %}
+    <p>{{ site.alert.message }}{% if site.alert.link %} <a href="{{ site.alert.link }}">{{ site.alert.linkText or "Learn more" }}</a>{% endif %}</p>
+  </div>
+</div>
+{%- endif %}
+{%- if not site.recruiting.open and page.url == "/" %}
+<div class="site-alert site-alert--warning" role="status">
+  <div class="container site-alert-inner">{% icon "alert" %}<p>{{ site.recruiting.waitlistMessage }} <a href="/join/">Joining details</a></p></div>
+</div>
+{%- endif %}

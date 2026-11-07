@@ -1,0 +1,13 @@
+<div class="topbar">
+  <div class="container topbar-inner">
+    <p class="topbar-item topbar-parade">{% icon "clock" %}<span><strong>Parade night:</strong> {{ site.paradeNight.label }} · {{ site.address.building }}</span></p>
+    <ul class="topbar-links" role="list">
+      <li><a href="tel:{{ site.phoneHref }}">{% icon "phone" %}<span>{{ site.phone }}</span></a></li>
+      <li><a href="mailto:{{ site.email }}">{% icon "mail" %}<span>{{ site.email }}</span></a></li>
+      <li><a href="/contact/#absence" class="topbar-absence">{% icon "user-x" %}<span>Report an absence</span></a></li>
+      <li class="topbar-social"><a href="{{ site.social.facebook }}" rel="noopener" aria-label="395 Squadron on Facebook">{% icon "facebook" %}</a></li>
+      <li class="topbar-social"><a href="{{ site.social.instagram }}" rel="noopener" aria-label="395 Squadron on Instagram">{% icon "instagram" %}</a></li>
+      <li><button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch colour theme" title="Switch light / dark theme">{% icon "moon", "icon-moon" %}{% icon "sun", "icon-sun" %}</button></li>
+    </ul>
+  </div>
+</div>

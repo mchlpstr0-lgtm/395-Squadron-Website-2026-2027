@@ -1,0 +1,19 @@
+# Event categories used by the calendar (colour = dot / stripe colour).
+# Add new ones freely; the calendar filter only shows categories that are in use.
+training:          { label: "Training night",       color: "#1f3f7a" }
+ceremonial:        { label: "Parade & ceremonial",  color: "#b07d0a" }
+band:              { label: "Band",                 color: "#7a3fa6" }
+ground-school:     { label: "Ground school",        color: "#1f7fbf" }
+ftx:               { label: "Field training (FTX)", color: "#3f7d3a" }
+karate:            { label: "Karate",               color: "#c0392b" }
+drill:             { label: "Drill team",           color: "#4b5d7a" }
+sports:            { label: "Sports & fitness",     color: "#d35400" }
+marksmanship:      { label: "Marksmanship",         color: "#6d4c41" }
+biathlon:          { label: "Biathlon",             color: "#00838f" }
+effective-speaking: { label: "Effective speaking",  color: "#ad1457" }
+flying:            { label: "Flying & gliding",     color: "#0277bd" }
+social:            { label: "Social",               color: "#e67e22" }
+fundraising:       { label: "Fundraising",          color: "#2e7d32" }
+deadline:          { label: "Deadline",             color: "#b3261e" }
+stand-down:        { label: "Stand down (no training)", color: "#7f8c8d" }
+other:             { label: "Other",                color: "#5b6b8c" }

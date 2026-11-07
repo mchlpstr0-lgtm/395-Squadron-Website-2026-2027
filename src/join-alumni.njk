@@ -1,0 +1,56 @@
+---
+layout: layouts/page.njk
+title: Join Alumni
+heading: Are You a Former Cadet or Staff of 395 Squadron?
+eyebrow: 395 Squadron Alumni Association
+heroImage: /assets/img/alumni/80th-banquet.jpg
+heroPosition: center 40%
+intro: Become a member of the Alumni Association to receive important updates about Alumni events and newsletters by filling out the form below.
+description: Join the 395 Squadron Alumni Association – for former cadets, staff and officers of 395 Edmonton Royal Canadian Air Cadet Squadron.
+permalink: /join-alumni/
+scripts: ["/assets/js/alumni-form.js"]
+---
+<div class="split">
+  <form class="form card card-pad" data-alumni-form
+        action="{{ site.forms.alumniEndpoint or ('mailto:' + site.alumni.email + '?subject=Join%20the%20395%20Alumni%20Association') }}"
+        method="post" {% if not site.forms.alumniEndpoint %}enctype="text/plain"{% endif %}
+        data-endpoint="{{ site.forms.alumniEndpoint }}" data-email="{{ site.alumni.email }}" novalidate>
+    <fieldset class="field" style="border:0;padding:0;margin:0">
+      <legend>Name <span class="req" aria-hidden="true">*</span></legend>
+      <div class="form-row">
+        <div class="field"><label for="al-first">First Name</label><input type="text" id="al-first" name="first_name" autocomplete="given-name" required></div>
+        <div class="field"><label for="al-last">Last Name</label><input type="text" id="al-last" name="last_name" autocomplete="family-name" required></div>
+      </div>
+    </fieldset>
+    <div class="form-row">
+      <div class="field"><label for="al-email">Email <span class="req" aria-hidden="true">*</span></label><input type="email" id="al-email" name="email" autocomplete="email" required></div>
+      <div class="field"><label for="al-phone">Phone</label><input type="tel" id="al-phone" name="phone" autocomplete="tel"></div>
+    </div>
+    <div class="field"><label for="al-co">Name of CO</label><input type="text" id="al-co" name="name_of_co" list="co-list"></div>
+    <datalist id="co-list">{% for co in history.commandingOfficers %}<option value="{{ co.name }}">{% endfor %}</datalist>
+    <div class="form-row">
+      <div class="field"><label for="al-cadet">Years With Squadron as a Cadet</label><input type="text" id="al-cadet" name="years_as_cadet" placeholder="e.g. 1984 – 1990"></div>
+      <div class="field"><label for="al-staff">Years With Squadron as Staff</label><input type="text" id="al-staff" name="years_as_staff" placeholder="e.g. 1995 – 2002"></div>
+    </div>
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+    <p class="field-error" data-form-error hidden></p>
+    <div class="form-status" data-form-status hidden role="status"></div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    {%- if not site.forms.alumniEndpoint %}
+    <p class="hint">Submitting opens your email app with your details filled in, addressed to the Alumni Association ({{ site.alumni.email }}).</p>
+    {%- endif %}
+  </form>
+  <aside>
+    <img src="/assets/img/alumni/alumni-logo.png" alt="395 Squadron Alumni logo" width="450" loading="lazy" style="background:#fff;border-radius:var(--radius);padding:1rem;border:1px solid var(--border)">
+    <div class="card card-pad" style="margin-top:1.25rem">
+      <h2 class="aside-heading">About the Alumni Association</h2>
+      <p>Over 3,000 former cadets, officers and staff have been through 395 Squadron since 1946. The Alumni Association supports the squadron financially and morally, helps with mock selection boards and effective speaking competitions, and organizes reunions such as the 80th Anniversary.</p>
+      <ul class="footer-list" style="gap:.4rem">
+        <li><a href="/newsletters/">Read the newsletters</a></li>
+        <li><a href="/gallery/">Browse the alumni gallery</a></li>
+        <li><a href="/squadron-history/#alumni">Alumni Association history</a></li>
+        <li><a href="mailto:{{ site.alumni.email }}">{{ site.alumni.email }}</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>

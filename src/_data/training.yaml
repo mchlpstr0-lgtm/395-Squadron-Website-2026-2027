@@ -1,0 +1,114 @@
+# Training activities shown on the Training page (in this order).
+# `body` paragraphs may contain simple HTML links.
+- id: band
+  title: Play a Musical Instrument
+  tag: Joint Music Program
+  image: /assets/img/training/band.jpg
+  alt: 395 Squadron band cadets performing
+  facts: ["Mondays 6:30 – 9 pm", "Alberta Aviation Museum hangar", "Instruments provided", "No experience needed"]
+  body:
+    - The Joint Music Program takes place weekly and includes cadets from 395 Squadron and 504 Squadron. This band performs at annual reviews and other special events at the discretion of both unit COs. The Music Program Coordinator coordinates all performances and training. For purposes of regular unit training, selected members of the band perform as sub groups under the direction of the Unit Band Officer.
+    - Everyone who is a cadet of 395 Squadron is invited to join the band. No prior experience is required as instruction on various instruments will be given. All instruments are provided at no cost to the cadets. Band practice is on Monday night from 1830 hrs to 2100 hrs at the 504/Alberta Aviation Museum Hangar, located at 11410 Kingsway Ave.
+
+- id: drill
+  title: Drill
+  tag: Drill team
+  image: /assets/img/training/drill.jpg
+  alt: Cadets practising precision drill
+  facts: ["Most Saturdays, Oct – Apr", "Competition in May", "Open to all cadets"]
+  body:
+    - The squadron drill team trains most Saturdays between October and April, concluding with an Edmonton and area competition in May of each year. The drill team is open to all members of 395 Squadron. Training begins in October of each year.
+
+- id: fitness
+  title: Fitness Activities
+  tag: Sports
+  image: /assets/img/training/fitness.jpg
+  alt: Cadets playing sports in a gym
+  facts: ["Most Saturdays", "Basketball, volleyball & more", "Open to all cadets"]
+  body:
+    - Most Saturdays a fitness activity is held for cadets to participate in. It is open to all cadets of 395 Squadron. Activities conducted are based on the number of cadets who show up and what they would like to do. Activities include basketball, volleyball, etc.
+
+- id: karate
+  title: Karate
+  tag: Karate Club
+  image: /assets/img/training/karate.jpg
+  alt: Cadets at karate training
+  facts: ["Most Saturdays, Oct – May", "Open to all cadets"]
+  body:
+    - The Karate Club trains on most Saturdays between October and May. The club is open to all members of 395 Squadron. Training begins in October of each year.
+
+- id: marksmanship
+  title: Marksmanship Team
+  tag: Marksmanship
+  image: /assets/img/training/marksmanship.jpg
+  alt: Cadets on the marksmanship range
+  facts: ["Zone competition in February", "Team of 5", "Anyone is eligible"]
+  body:
+    - Marksmanship training takes place at various times throughout the year. The zone competition is scheduled for February each year. A team of 5 cadets will be selected to take part in this competition. Anyone is eligible to be on the team.
+
+- id: biathlon
+  title: Biathlon
+  tag: Biathlon
+  image: /assets/img/training/biathlon.jpg
+  alt: Cadet biathlon team on skis
+  facts: ["Male & female teams", "Zone competition"]
+  body:
+    - Biathlon training takes place at various times throughout the year. There are male and female teams that compete at Zone Competition.
+
+- id: effective-speaking
+  title: Effective Speaking
+  tag: Public speaking
+  image: /assets/img/training/effective-speaking.jpg
+  alt: A cadet giving a speech
+  facts: ["Competition March – April", "Open to all levels"]
+  body:
+    - Effective speaking is a good way to learn public speaking and speech writing skills as well as boost the confidence and leadership abilities of a cadet. The effective speaking competition is usually scheduled sometime between March and April each year. This program is open to all cadets in any level.
+
+- id: ground-school
+  title: Ground School
+  tag: Aviation
+  image: /assets/img/training/ground-school.jpg
+  alt: Cadets studying aviation theory
+  facts: ["Level 3 cadets and up", "Apply Sept / Oct", "Required for Glider & Power courses"]
+  body:
+    - Ground school is intended for level 3 cadets and up that are applying for either the Glider Pilot or Power Pilot Training Course. Ground school has moved to an online self-driven program applied for in early September/October. This program includes the qualification exam required to apply for the Glider or Power Training Course.
+
+- id: ftx
+  title: Field Training Exercise
+  tag: FTX weekend
+  image: /assets/img/training/ftx.jpg
+  alt: Cadets on a field training exercise
+  facts: ["At least one weekend per year", "Friday evening – Sunday afternoon", "Dress for the weather"]
+  body:
+    - Field Training Exercise is a major training period that is held outside of the regular Tuesday night training period. 395 Squadron holds at least one weekend per year. At FTX weekend many training points (performance objectives) are performed during exercises that can’t be done at any other time during the training year.
+    - A camp facility is booked from Friday evening until Sunday afternoon for the cadets to be able to eat, sleep, and perform all of the necessary activities. Since the vast majority of activities are performed outdoors, it is essential that the cadets are dressed for the weather and have any additional clothing required should the weather conditions change. The days are long and the cadets are challenged, however, it is all done in an informative and enjoyable fashion. The squadron staff and senior cadets provide the training and supervision throughout the weekend and the parent sponsoring committee and volunteers are responsible for keeping everyone nourished throughout. Significant preparation takes place ahead of time, and everyone (staff, cadets, and volunteers) puts in long hours, and faces a variety of challenges, however, everyone leaves with a strong sense of accomplishment.
+
+- id: summer-training
+  title: Summer Training
+  tag: Cadet summer training centres
+  image: /assets/img/training/summer-training.jpg
+  alt: Cadets at a summer training centre
+  facts: ["Free of charge", "Across Canada", "Supervised by CIC officers"]
+  body:
+    - Outstanding and highly motivated cadets often have the opportunity to attend a summer training course. This is a perfect opportunity for them to travel, make friends and discover an entirely different way of life! Cadets learn to manage their time and become more responsible, under the supervision of Cadet Instructors Cadre (CIC) officers specifically trained to work with teenagers.
+    - Courses offered at Air Cadet summer training include leadership, flying, fitness and sports, survival, military band, pipe band, aerospace, aviation technology, and marksmanship. The courses offered include familiarization, basic, advanced, and national summer training courses.
+
+- id: gliding
+  title: Familiarization Gliding
+  tag: Flying
+  image: /assets/img/training/gliding.jpg
+  alt: An air cadet glider in flight
+  facts: ["~55,000 glider flights a year", "Glider licence at 16", "Private Pilot Licence at 17–18"]
+  body:
+    - An average of 55 000 glider flights are done every year. In Canada, the majority of glider pilots licences are earned by Royal Canadian Air Cadets. Cadets must be 16 to write the certifying Transport Canada exam.
+    - Each year, 250 air cadets earn their Transport Canada Private Pilot Licence through the Air Cadet Flying Scholarship program. Cadets aged 17 and 18 years old who have proven themselves to be high achievers in the cadet program and who have a particular interest and aptitude in the field of aviation have the opportunity to learn how to fly.
+
+- id: fam-flying
+  title: Familiarization Flying
+  tag: Flying
+  image: /assets/img/training/fam-flying.jpg
+  alt: Cadets beside a light aircraft before a familiarization flight
+  facts: ["Pre- and post-flight briefings", "Hands on the controls", "Strictly controlled by DND"]
+  body:
+    - Familiarization flying includes a detailed pre and post flight briefing. During the flight cadets are introduced to the primary aircraft controls and how they maneuver the aircraft in flight. Cadets will be given the opportunity to fly straight and level, maneuver the aircraft in turns and get a description of the flight instruments.
+    - Optional familiarization flying is strongly encouraged by both the Air Cadet League and DND as a means to broaden and enhance the aviation experiences of cadets. However, it must be remembered that in the interests of safety, all familiarization flying activities are strictly controlled by DND.

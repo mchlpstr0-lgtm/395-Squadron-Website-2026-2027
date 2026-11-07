@@ -1,0 +1,62 @@
+---
+layout: layouts/page.njk
+title: Training
+heading: Training Overview
+eyebrow: What cadets do
+heroImage: /assets/img/training/overview.jpg
+heroPosition: center 35%
+intro: The Canadian cadet program has something for everybody. Mandatory and optional training takes place throughout the year at different times and locations.
+description: Air cadet training at 395 Squadron – band, drill, fitness, karate, marksmanship, biathlon, effective speaking, ground school, field training, summer training, gliding, flying and scholarships.
+permalink: /training/
+---
+<div class="split" style="margin-bottom:2.5rem">
+  <div>
+    <p class="lead">See below for more information and be sure to listen to announcements for details. New recruits are free to try different activities as long as once they’ve made a commitment to an activity they attend regularly.</p>
+    <p>Regular training for all cadets happens on <strong>{{ site.paradeNight.label }}</strong> at {{ site.address.building }}. Optional activities are posted in the <a href="/calendar/">squadron calendar</a> and the monthly <a href="/announcements/">announcements</a>.</p>
+  </div>
+  <div class="callout callout--info">
+    <p><strong>New to cadets?</strong> Our <a href="/parents/">parents &amp; new cadets guide</a> explains what to wear, what to bring and what all the acronyms mean.</p>
+  </div>
+</div>
+
+<nav class="jump-nav" aria-label="Training activities">
+  {%- for t in training %}<a class="chip" href="#{{ t.id }}">{{ t.title }}</a>{% endfor %}
+  <a class="chip" href="#scholarships">Scholarships</a>
+</nav>
+
+<div class="training-list">
+  {%- for t in training %}
+  <section class="training-item" id="{{ t.id }}" aria-labelledby="{{ t.id }}-h">
+    <div class="training-media"><img src="{{ t.image }}" alt="{{ t.alt }}" loading="lazy"></div>
+    <div class="training-text">
+      <span class="training-tag">{{ t.tag }}</span>
+      <h2 id="{{ t.id }}-h">{{ t.title }}</h2>
+      {%- if t.facts %}
+      <ul class="training-facts" role="list">{% for f in t.facts %}<li>{{ f }}</li>{% endfor %}</ul>
+      {%- endif %}
+      {%- for p in t.body %}<p>{{ p | safe }}</p>{% endfor %}
+    </div>
+  </section>
+  {%- endfor %}
+</div>
+
+<section class="section-title" id="scholarships" aria-labelledby="scholarships-h" style="scroll-margin-top:100px">
+  <hr>
+  <div class="split">
+    <div>
+      <span class="training-tag">Post-secondary</span>
+      <h2 id="scholarships-h">Scholarships</h2>
+      <p>In 2018, the Air Cadet League of Canada awarded more than $20,000 in post-secondary scholarships to deserving Air Cadets across the country, including the Young Citizen Foundation Scholarship, the Birchall Scholarship, the Dale Scholarship, the Alex Venables Scholarship in Engineering, the Jazz Aviation Pathway Award for Professionalism, the Jazz Aviation Pathway Award for Professionalism and Diversity, and two Air Cadet League of Canada Foundation Scholarships.</p>
+      <p>Get a head start on the competition and start working on your application early. Scholarship names, amounts and deadlines change every year – check the Air Cadet League for the current list, forms and deadlines.</p>
+      <p><a class="btn btn-primary" href="https://aircadetleague.com/for-cadets/" rel="noopener">Air Cadet League – for cadets {% icon "external", "icon-sm" %}</a></p>
+    </div>
+    <div class="card card-pad">
+      <h3>PAMRA</h3>
+      <p><strong>Parents’ Association Meritorious Remuneration Award</strong> – a $500 award for cadets enrolled in post-secondary studies.</p>
+      <ul class="doc-list" role="list">
+        <li><a class="doc-link" href="/s/PAMRA-criteria-1.pdf"><span class="doc-icon">{% icon "file" %}</span><span><span class="doc-name">PAMRA criteria</span><span class="doc-meta">PDF · 83 KB</span></span>{% icon "download", "icon-dl" %}</a></li>
+        <li><a class="doc-link" href="/s/PAMRA-application-1.pdf"><span class="doc-icon">{% icon "file" %}</span><span><span class="doc-name">PAMRA application</span><span class="doc-meta">PDF · 42 KB</span></span>{% icon "download", "icon-dl" %}</a></li>
+      </ul>
+    </div>
+  </div>
+</section>

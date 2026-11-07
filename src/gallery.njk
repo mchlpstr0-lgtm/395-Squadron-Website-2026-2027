@@ -1,0 +1,22 @@
+---
+layout: layouts/page.njk
+title: Alumni Gallery
+eyebrow: Alumni
+intro: Photos, programmes and clippings from 395 Squadron’s history – summer camps at Penhold, banquets, the Silver Anniversary and more. Select any photo to enlarge it.
+description: Historic photos from 395 Edmonton Royal Canadian Air Cadet Squadron’s alumni collection.
+permalink: /gallery/
+---
+<div class="gallery-grid" data-gallery>
+  {%- for g in gallery %}
+  {%- set sz = gallerySizes[g.file] %}
+  <figure class="gallery-item">
+    <button type="button" data-full="/assets/img/gallery/{{ g.file }}" data-caption="{{ g.caption }}" aria-label="Enlarge: {{ g.caption }}">
+      <img src="/assets/img/gallery/thumbs/{{ g.file }}" alt="{{ g.caption }}" width="{{ sz[0] }}" height="{{ sz[1] }}" loading="lazy">
+    </button>
+    <figcaption>{{ g.caption }}</figcaption>
+  </figure>
+  {%- endfor %}
+</div>
+<div class="callout callout--info" style="margin-top:2rem">
+  <p><strong>Have photos to share?</strong> The Alumni Association would love to add them to the collection – email <a href="mailto:{{ site.alumni.email }}?subject=Photos%20for%20the%20alumni%20gallery">{{ site.alumni.email }}</a>.</p>
+</div>
