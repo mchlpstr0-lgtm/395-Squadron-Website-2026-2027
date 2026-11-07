@@ -1,7 +1,7 @@
 # 395 Squadron Website (2026–2027)
 
 The website for **395 Edmonton “Griffon” Royal Canadian Air Cadet Squadron**, rebuilt from the
-Squarespace site at [395squadron.ca](https://www.395squadron.ca). Every page, announcement,
+Squarespace site at [395squadron.ca](https://395squadron.ca). Every page, announcement,
 photo and document from that site is kept, and some new tools for cadets and parents have been added.
 
 It is a fast, static site built with [Eleventy](https://www.11ty.dev/). Content lives in plain
@@ -146,12 +146,18 @@ whenever changes reach the `main` branch. Pull requests are built and checked bu
 The site will first appear at `https://<github-user>.github.io/395-Squadron-Website-2026-2027/`
 (the build adjusts links for that sub-folder automatically).
 
-**Moving www.395squadron.ca over from Squarespace:**
-1. In **Settings → Pages → Custom domain**, enter `www.395squadron.ca`.
-2. At the domain registrar, point `www` to GitHub Pages with a `CNAME` record to `<github-user>.github.io`
-   (see [GitHub’s guide](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site)).
-3. Make sure `"url"` in `src/_data/site.json` matches the domain (it’s used for the calendar
-   subscription link, RSS feed, sitemap and social-media previews).
+**Moving 395squadron.ca over from Squarespace:**
+1. In **Settings → Pages → Custom domain**, enter `395squadron.ca` and save.
+2. In the domain’s DNS settings (wherever 395squadron.ca is registered – currently managed through Squarespace):
+   - remove the existing Squarespace records for `@` and `www`;
+   - add four `A` records for `@` pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`
+     (optionally the matching `AAAA` records `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`);
+   - add a `CNAME` record for `www` pointing to `<github-user>.github.io` so `www.395squadron.ca` forwards to `395squadron.ca`.
+
+   See [GitHub’s custom domain guide](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+3. Once the DNS check passes (can take up to 24 hours), tick **Enforce HTTPS** in Settings → Pages.
+4. `"url"` in `src/_data/site.json` is already set to `https://395squadron.ca` – it’s used for the calendar
+   subscription link, RSS feed, sitemap and social-media previews. Change it there if the address ever changes.
 
 The site is plain HTML/CSS/JS in `_site/` after `npm run build`, so it can be hosted anywhere
 (Netlify, Cloudflare Pages, any web server) if you prefer.
